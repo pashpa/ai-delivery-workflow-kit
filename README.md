@@ -25,43 +25,24 @@ Secondary use case:
 
 - use this repository as a public reference for how to structure AI-assisted product delivery in a repo-first way.
 
-## Installation modes
+## Operating mode
 
-This kit supports two practical modes.
+This kit uses one public operating mode: `Standard`.
 
-### Starter
+Why only one mode:
 
-Use when:
+- the workflow is meant to be adopted as a real operating system, not as a weakened sample;
+- stripped-down workflow variants remove too much discipline from the parts that actually prevent agent drift;
+- in practice, most teams adopting an AI delivery workflow need launch rituals, bounded task docs, and delegated-execution discipline from the beginning.
 
-- one person or one main owner drives delivery;
-- you want low process overhead;
-- you still want task docs, checkpoints, reviews, and role separation.
+`Standard` assumes:
 
-What it gives you:
-
-- core workflow;
-- PM / Tech Lead / Developer roles;
-- essential templates;
-- repo-level `AGENTS.md` rules;
-- installation guide.
-
-### Standard
-
-Use when:
-
-- multiple features run in parallel;
-- more than one TL-like owner exists;
-- you want explicit launch rituals and better delegation control;
-- branch/worktree/process hygiene matters.
-
-What it adds:
-
-- PM onboarding;
-- TL onboarding;
-- PM launch checklist;
-- TL launch checklist;
-- TL-to-developer packet template;
-- stronger subagent operating model.
+- explicit PM -> Tech Lead -> Developer handoffs;
+- canonical task docs;
+- start acknowledgements;
+- checkpoints and factual review;
+- launch checklists for PM and TL;
+- branch/worktree/process discipline.
 
 ## Repository structure
 
@@ -78,7 +59,6 @@ What it adds:
 - [`workflow/templates/`](workflow/templates)
 - [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md)
 - [`install/AGENT_ADOPTION_PROMPT.md`](install/AGENT_ADOPTION_PROMPT.md)
-- [`adapters/STARTER.md`](adapters/STARTER.md)
 - [`adapters/STANDARD.md`](adapters/STANDARD.md)
 
 ## Minimal adoption path
@@ -86,8 +66,8 @@ What it adds:
 If you want to install this into another repo:
 
 1. Read [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md).
-2. Choose `Starter` or `Standard`.
-3. Copy the selected workflow docs into the target repo.
+2. Use the `Standard` adapter as the installation baseline.
+3. Copy and adapt the workflow docs into the target repo.
 4. Rewrite the target repo root `AGENTS.md` so that it points to the installed workflow docs.
 5. Start using the role docs and templates immediately.
 
@@ -113,7 +93,6 @@ This kit does not try to be:
 - a full project-management product;
 - a copy of one company's private documentation tree.
 
-## Suggested next steps
+## Suggested next step
 
-- Start with [`adapters/STARTER.md`](adapters/STARTER.md) if you are solo or just getting started.
-- Start with [`adapters/STANDARD.md`](adapters/STANDARD.md) if you expect parallel work and delegated execution.
+- Start with [`adapters/STANDARD.md`](adapters/STANDARD.md) and install it as the canonical workflow baseline.

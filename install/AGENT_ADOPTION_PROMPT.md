@@ -10,9 +10,7 @@ install an appropriate version of that workflow into this target repository so t
 
 What you must do:
 1. Inspect the target repository first.
-2. Choose the correct installation mode:
-   - `Starter`
-   - `Standard`
+2. Install the `Standard` operating baseline from the workflow kit.
 3. Copy and adapt only the workflow docs that fit this repo.
 4. Rewrite the target repo root `AGENTS.md` so it points to the installed workflow docs and reflects repo-specific execution rules.
 5. Do not copy public-kit wording blindly if it does not fit the target repo.
@@ -25,7 +23,7 @@ What you must do:
    - factual review
    - clear git hygiene and packaging truth
 8. At the end, report:
-   - chosen installation mode
+   - installed operating baseline
    - files added or changed
    - repo-specific adaptations made
    - any open decisions still needed
