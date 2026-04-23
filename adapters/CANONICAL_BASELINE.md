@@ -1,6 +1,6 @@
-# Standard Adapter
+# Canonical Baseline
 
-Choose `Standard` when delivery is already parallel enough that launch discipline and handoff quality matter every week.
+Use this document as the single installation baseline for the workflow kit.
 
 ## Best fit
 

@@ -25,17 +25,17 @@ Secondary use case:
 
 - use this repository as a public reference for how to structure AI-assisted product delivery in a repo-first way.
 
-## Operating mode
+## Workflow baseline
 
-This kit uses one public operating mode: `Standard`.
+This kit uses one public workflow baseline.
 
-Why only one mode:
+Why only one baseline:
 
 - the workflow is meant to be adopted as a real operating system, not as a weakened sample;
 - stripped-down workflow variants remove too much discipline from the parts that actually prevent agent drift;
 - in practice, most teams adopting an AI delivery workflow need launch rituals, bounded task docs, and delegated-execution discipline from the beginning.
 
-`Standard` assumes:
+That baseline assumes:
 
 - explicit PM -> Tech Lead -> Developer handoffs;
 - canonical task docs;
@@ -59,14 +59,14 @@ Why only one mode:
 - [`workflow/templates/`](workflow/templates)
 - [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md)
 - [`install/AGENT_ADOPTION_PROMPT.md`](install/AGENT_ADOPTION_PROMPT.md)
-- [`adapters/STANDARD.md`](adapters/STANDARD.md)
+- [`adapters/CANONICAL_BASELINE.md`](adapters/CANONICAL_BASELINE.md)
 
 ## Minimal adoption path
 
 If you want to install this into another repo:
 
 1. Read [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md).
-2. Use the `Standard` adapter as the installation baseline.
+2. Use the canonical baseline doc as the installation baseline.
 3. Copy and adapt the workflow docs into the target repo.
 4. Rewrite the target repo root `AGENTS.md` so that it points to the installed workflow docs.
 5. Start using the role docs and templates immediately.
@@ -95,4 +95,4 @@ This kit does not try to be:
 
 ## Suggested next step
 
-- Start with [`adapters/STANDARD.md`](adapters/STANDARD.md) and install it as the canonical workflow baseline.
+- Start with [`adapters/CANONICAL_BASELINE.md`](adapters/CANONICAL_BASELINE.md) and install it as the canonical workflow baseline.
