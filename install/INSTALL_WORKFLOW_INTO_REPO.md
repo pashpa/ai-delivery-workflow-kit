@@ -10,7 +10,7 @@ After installation, the target repo should have:
 - role docs;
 - templates;
 - root `AGENTS.md` wired to the workflow;
-- one chosen operating mode: `Starter` or `Standard`.
+- one explicit operating mode: `Standard`.
 
 ## 1. Inspect the target repo first
 
@@ -24,23 +24,18 @@ Before copying anything, inspect:
 
 Do not blindly install the same amount of process everywhere.
 
-## 2. Choose installation mode
+## 2. Choose the operating baseline
 
-### Choose `Starter` if:
+This kit now installs one canonical operating baseline: `Standard`.
 
-- one main owner runs delivery;
-- the repo is early-stage;
-- overhead must stay low.
+Use it even in smaller repos.
 
-### Choose `Standard` if:
+Reason:
 
-- multiple features run in parallel;
-- delegation to execution agents matters;
-- launch rituals and stronger process control are needed.
+- the workflow loses too much safety when launch discipline and delegated-execution rules are stripped out;
+- the public kit is meant to install a real operating model, not a demo version of one.
 
 ## 3. Minimum files to install
-
-### Starter
 
 Install:
 
@@ -48,7 +43,9 @@ Install:
 - `workflow/core/PROJECT_WORKFLOW.md`
 - `workflow/core/TRACEABILITY_RULES.md`
 - `workflow/roles/PM_WORKFLOW.md`
+- `workflow/roles/PM_ONBOARDING.md`
 - `workflow/roles/TECH_LEAD_WORKFLOW.md`
+- `workflow/roles/TECH_LEAD_ONBOARDING.md`
 - `workflow/roles/DEVELOPER_WORKFLOW.md`
 - `workflow/roles/DEVELOPER_ONBOARDING.md`
 - `workflow/templates/DEV_TASK_TEMPLATE.md`
@@ -56,20 +53,13 @@ Install:
 - `workflow/templates/START_ACK_TEMPLATE.md`
 - `workflow/templates/DEVELOPER_CHECKPOINT_TEMPLATE.md`
 - `workflow/templates/TECH_LEAD_REVIEW_TEMPLATE.md`
-- `workflow/templates/PM_TO_TECH_LEAD_HANDOFF_TEMPLATE.md`
-- `workflow/templates/SUBAGENT_HANDOFF_TEMPLATE.md`
-- root `AGENTS.md`
-
-### Standard
-
-Install everything from `Starter`, plus:
-
-- `workflow/roles/PM_ONBOARDING.md`
-- `workflow/roles/TECH_LEAD_ONBOARDING.md`
 - `workflow/templates/PM_LAUNCH_CHECKLIST.md`
+- `workflow/templates/PM_TO_TECH_LEAD_HANDOFF_TEMPLATE.md`
 - `workflow/templates/PM_SUBAGENT_HANDOFF_TEMPLATE.md`
+- `workflow/templates/SUBAGENT_HANDOFF_TEMPLATE.md`
 - `workflow/templates/TL_SUBAGENT_LAUNCH_CHECKLIST.md`
 - `workflow/templates/TL_TO_DEVELOPER_SUBAGENT_PACKET_TEMPLATE.md`
+- root `AGENTS.md`
 
 ## 4. Adapt the wording to the target repo
 
@@ -96,7 +86,7 @@ The target repo root `AGENTS.md` should:
 
 When installation finishes, the target repo should make these things explicit:
 
-- chosen installation mode;
+- installed workflow baseline;
 - default branch expectations;
 - whether dedicated worktrees are required or only recommended;
 - default delivery model and reasoning baseline;
@@ -104,12 +94,13 @@ When installation finishes, the target repo should make these things explicit:
 
 ## 7. Do not over-install
 
-Do not install process that the target repo cannot actually operate.
+Do not install workflow text mechanically without adapting it to the target repo.
 
 Examples:
 
-- do not install heavy parallel-work patterns into a tiny solo repo if they will never be used;
-- do not install browser QA guidance into a backend-only service unless it is truly needed.
+- do not keep wording about worktrees if the target repo cannot or will not use them;
+- do not keep browser QA expectations in a backend-only service unless they are truly needed;
+- do not keep references to roles the target team will not actually use without renaming or collapsing them.
 
 ## 8. Final installation output
 

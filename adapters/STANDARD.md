@@ -9,14 +9,16 @@ Choose `Standard` when delivery is already parallel enough that launch disciplin
 - regular delegated execution;
 - multiple bounded features or fixes active in parallel.
 
-## What to add on top of Starter
+## What this baseline includes
 
 - PM onboarding;
 - TL onboarding;
 - PM launch checklist;
 - TL launch checklist;
 - TL-to-developer packet template;
-- stronger delegated-launch discipline.
+- stronger delegated-launch discipline;
+- explicit start acknowledgements;
+- investigation-mode support.
 
 ## Practical baseline
 
