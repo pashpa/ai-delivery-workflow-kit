@@ -10,7 +10,7 @@ install an appropriate version of that workflow into this target repository so t
 
 What you must do:
 1. Inspect the target repository first.
-2. Install the `Standard` operating baseline from the workflow kit.
+2. Install the canonical workflow baseline from the workflow kit.
 3. Copy and adapt only the workflow docs that fit this repo.
 4. Rewrite the target repo root `AGENTS.md` so it points to the installed workflow docs and reflects repo-specific execution rules.
 5. Do not copy public-kit wording blindly if it does not fit the target repo.

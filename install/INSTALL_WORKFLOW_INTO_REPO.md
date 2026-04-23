@@ -10,7 +10,7 @@ After installation, the target repo should have:
 - role docs;
 - templates;
 - root `AGENTS.md` wired to the workflow;
-- one explicit operating mode: `Standard`.
+- one explicit canonical workflow baseline.
 
 ## 1. Inspect the target repo first
 
@@ -24,9 +24,9 @@ Before copying anything, inspect:
 
 Do not blindly install the same amount of process everywhere.
 
-## 2. Choose the operating baseline
+## 2. Choose the workflow baseline
 
-This kit now installs one canonical operating baseline: `Standard`.
+This kit installs one canonical workflow baseline.
 
 Use it even in smaller repos.
 
