@@ -28,7 +28,7 @@ This document gives a new Tech Lead a short, repeatable entry path into the work
 
 For normal delivery execution:
 
-- model: `GPT-5.4`
+- model: `GPT-5.5`
 - reasoning: `medium`
 
 If a repo wants a different baseline, it should state that explicitly.

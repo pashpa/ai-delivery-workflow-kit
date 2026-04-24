@@ -141,7 +141,7 @@ The delegated path requires:
 
 For normal delivery work, the default execution baseline is:
 
-- model: `GPT-5.4`
+- model: `GPT-5.5`
 - reasoning: `medium`
 
 If a team changes this baseline, it should do so explicitly at repo level rather than silently per task.
