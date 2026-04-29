@@ -4,9 +4,11 @@ Date: YYYY-MM-DD
 Status: draft
 Owner: Tech Lead
 Executor: Developer
-Track or feature: `<name>`
-Stage: `<name>`
-Stage mode: `investigation`
+Initiative: `<name>`
+Track: `<name>`
+Lane: `<name>`
+Task: `<name>`
+Task mode: `investigation`
 
 ## 1. Basis
 
@@ -49,7 +51,7 @@ Stage mode: `investigation`
 
 ## 7. Investigation acceptance
 
-This stage is successful if it returns:
+This Task is successful if it returns:
 
 - reproduced or not reproduced;
 - exact repro actually used;

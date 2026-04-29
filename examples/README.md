@@ -9,4 +9,4 @@ Future examples can include:
 - single-feature PM -> TL -> Developer handoff;
 - cross-surface feature contract;
 - bug investigation package;
-- small-task vs full-stage example.
+- small Task vs full Lane example.

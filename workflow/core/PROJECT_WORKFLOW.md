@@ -2,7 +2,7 @@
 
 Status: Active
 
-This document describes the canonical PM -> Tech Lead -> Developer -> Review loop.
+This document describes the canonical CTO / Program Architect -> PM -> Tech Lead -> Developer -> Review loop.
 
 The goal is to make delivery reproducible, reviewable, and usable by humans and agents under limited context.
 
@@ -10,50 +10,71 @@ The goal is to make delivery reproducible, reviewable, and usable by humans and 
 
 Nothing important should live only in chat.
 
-Decisions, scope, and stages must be reflected in:
+Decisions, scope, Tracks, Lanes, and Tasks must be reflected in:
 
 - documentation;
 - code;
 - reviewable packages;
 - checks and runtime evidence.
 
-## 2. Main delivery flow
+## 2. Main delivery flow for substantial product work
 
-1. PM prepares or updates product docs.
-2. Tech Lead reviews current repo and current documentation state.
-3. Tech Lead defines the canonical technical path.
-4. Tech Lead defines the current stage.
-5. Tech Lead creates a canonical task document.
-6. Tech Lead chooses the execution mode.
-7. Developer starts through an explicit `Start Ack`.
-8. Developer executes the stage within scope.
-9. Developer returns a checkpoint.
-10. Tech Lead reviews factually.
-11. The stage gets one of the allowed outcomes.
-12. Documentation is updated.
-13. The team moves to the next stage.
+1. CTO / Program Architect frames the Initiative only when workflow or cross-track structure is needed.
+2. PM prepares or updates product docs unless the product intent is already documented or the change is purely technical.
+3. Architecture Track defines the system path when architecture is not already clear.
+4. Delivery Planning Track splits the work into TL-owned Tracks or Lanes.
+5. Foundation Track creates shared rails before parallel delivery when multiple TLs will build on common contracts.
+6. Tech Lead creates Lane docs and canonical Task documents.
+7. Tech Lead chooses execution mode.
+8. Developer starts through an explicit `Start Ack`.
+9. Developer executes the Task within scope.
+10. Developer returns a checkpoint.
+11. Tech Lead reviews factually.
+12. The Task or Lane gets one of the allowed outcomes.
+13. Documentation is updated.
+14. The team moves to the next Task, Lane, or Track.
+
+Product work does not always require PM.
+
+Route changes as follows:
+
+- use PM when product discovery, scope, acceptance, user journey, copy, pricing, or policy is unclear;
+- use TL direct when product intent is already documented and the change is a bounded implementation or technical refinement;
+- use CTO / Program Architect only for workflow, cross-track architecture, or escalation decisions.
 
 ## 3. Debug and investigation flow
 
 Bug work has two valid modes:
 
-- ordinary fix stage;
-- investigation stage.
+- ordinary fix Task;
+- investigation Task.
 
 Canonical bug flow:
 
 1. Tech Lead records the symptom and exact repro.
-2. Tech Lead decides whether an ordinary fix stage is sufficient.
+2. Tech Lead decides whether an ordinary fix Task is sufficient.
 3. If not, an investigation task is opened.
 4. Developer returns an investigation checkpoint:
    - reproduced or not reproduced
    - root cause proven or not proven
    - fix path identified or not identified
 5. Tech Lead either:
-   - opens a follow-up fix stage
+   - opens a follow-up fix Task
    - or stops and replans
 
 ## 4. Role handoffs
+
+### CTO / Program Architect -> PM or Tech Lead
+
+CTO / Program Architect provides only high-level structure when needed:
+
+- Initiative framing;
+- expected Track outcome;
+- workflow route;
+- high-level constraints;
+- escalation triggers.
+
+CTO / Program Architect does not replace PM or TL ownership.
 
 ### PM -> Tech Lead
 
@@ -72,7 +93,7 @@ Tech Lead provides:
 
 - canonical task document;
 - links to related docs;
-- current stage;
+- current Track, Lane, and Task;
 - acceptance criteria;
 - stop factors;
 - validation target.
@@ -95,7 +116,7 @@ Developer returns:
 - runtime evidence when applicable;
 - next-step recommendation.
 
-Freeform summary alone is not enough for an active stage.
+Freeform summary alone is not enough for an active Task.
 
 ## 5. Packaging truth
 
@@ -156,3 +177,9 @@ Use short operating checklists:
 - TL launch checklist before delegated execution.
 
 These checklists exist to reduce drift after long threads, context compression, or team handoffs.
+
+## 9. Documentation and git
+
+Every role must leave durable outputs as defined in `workflow/core/DOCUMENTATION_OWNERSHIP.md`.
+
+Every non-trivial branch or package must follow `workflow/core/GIT_OPERATIONS.md` or the target repo's adapted equivalent.

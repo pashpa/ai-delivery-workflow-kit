@@ -13,7 +13,7 @@ No substantial work should begin from chat alone.
 Before delivery starts, there must be:
 
 - product context;
-- current stage;
+- current Initiative, Track, Lane, or Task;
 - explicit owner;
 - acceptance criteria;
 - for non-trivial delegated execution, a canonical task document.
@@ -37,11 +37,22 @@ Canonical truth lives in:
 
 Delegation between agents is allowed, but delegation does not become a source of truth by itself.
 
-## 3. Stage-based delivery
+## 3. Product-first delivery
 
-Work must move through explicit stages.
+Substantial product work should normally start from product truth.
 
-You may not move to the next stage until the current one is:
+The default sequence is:
+
+1. Product Definition Track
+2. Architecture Track
+3. Delivery Planning Track
+4. Foundation Track
+5. Parallel TL Delivery Tracks or Lanes
+6. Release Hardening Track
+
+Architecture may come first only when the product intent is already sufficiently documented or the work is purely technical.
+
+You may not move to the next Track or Lane until the current one is:
 
 - defined;
 - executed;
@@ -50,31 +61,44 @@ You may not move to the next stage until the current one is:
 
 This also applies to bug and regression work.
 
-If a normal fix loop does not work, the team must open an explicit investigation stage instead of continuing blind patching.
+If a normal fix loop does not work, the team must open an explicit investigation Task instead of continuing blind patching.
 
-## 4. One active canonical path
+## 4. Canonical work hierarchy
+
+New work uses:
+
+1. Initiative
+2. Track
+3. Lane
+4. Task
+
+Checkpoint and Review are not hierarchy levels by default. They are statuses or sections inside the owning Task or Lane unless the evidence is large enough to require a linked standalone artifact.
+
+## 5. One active canonical path
 
 Every active track needs one canonical execution path.
 
 That means:
 
 - one current doc set;
-- one current stage;
+- one current Track, Lane, and Task where applicable;
 - one current sequence of work;
 - explicit marking for historical or superseded material.
 
 Parallel bounded slices are allowed only when they still belong to one canonical path and their execution truth is kept explicit.
 
-## 5. Explicit ownership
+## 6. Explicit ownership
 
 Every artifact must have an owner.
 
+- CTO / Program Architect owns workflow rules, escalation rules, and super-high-level architecture constraints.
 - PM owns product truth.
-- Tech Lead owns the technical path and delivery governance.
-- Developer owns stage execution and checkpoint evidence.
+- Tech Lead owns the technical path, lane governance, task packets, branch/package readiness, and factual review for assigned lanes.
+- Developer owns task execution and checkpoint evidence.
+- QA owns validation evidence when assigned.
 - Reviewer owns the factual review verdict.
 
-## 6. Review is factual
+## 7. Review is factual
 
 Acceptance cannot happen by impression alone.
 
@@ -85,7 +109,7 @@ Review must be grounded in:
 - checks and CI when applicable;
 - screenshots or runtime proof when the work is UI or runtime-sensitive.
 
-## 7. Truth targets must be distinguished
+## 8. Truth targets must be distinguished
 
 Do not confuse:
 
@@ -97,7 +121,7 @@ Do not confuse:
 
 If a task refers to deploy or production, the workflow must validate that exact target instead of silently substituting feature-branch or preview evidence.
 
-## 8. Allowed review outcomes
+## 9. Allowed review outcomes
 
 After review, only these outcomes are allowed:
 
@@ -106,7 +130,7 @@ After review, only these outcomes are allowed:
 - `Reject and retry`
 - `Stop and replan`
 
-## 9. No silent scope expansion
+## 10. No silent scope expansion
 
 Do not silently expand scope.
 
@@ -120,11 +144,11 @@ If work requires changes to:
 
 the execution owner must stop and return the task for explicit review.
 
-## 10. No blind fix loops
+## 11. No blind fix loops
 
 If one or two ordinary fix attempts do not close a bug, or if the suspected cause is weak, stop blind patching.
 
-Open an investigation stage and require:
+Open an investigation Task and require:
 
 - exact repro;
 - expected vs actual behavior;
@@ -132,7 +156,7 @@ Open an investigation stage and require:
 - proof or falsification;
 - explicit verdict on whether a real fix path exists.
 
-## 11. Historical material must be marked
+## 12. Historical material must be marked
 
 Old plans and old paths must not remain as if they are current.
 
@@ -142,18 +166,18 @@ Mark them explicitly as:
 - `superseded`
 - `reference only`
 
-## 12. Limited context is assumed
+## 13. Limited context is assumed
 
 The process must survive context compression and new participants.
 
 That means the workflow must use:
 
-- explicit current stage;
+- explicit current Initiative, Track, Lane, and Task where applicable;
 - explicit related docs;
 - standard handoff artifacts;
 - documented statuses.
 
-## 13. Delegation does not replace governance
+## 14. Delegation does not replace governance
 
 Tech Leads may delegate execution.
 
@@ -168,10 +192,18 @@ But delegation does not replace:
 
 For non-trivial implementation work, the normal operating split is:
 
-- Tech Lead owns path, orchestration, and review;
+- Tech Lead owns path, orchestration, task handoff, branch/package readiness, and review;
 - Developer owns code-writing execution.
 
-## 14. Execution processes require ownership
+## 15. Git freshness is required
+
+Assume another human or agent may have updated the remote repository.
+
+Before non-trivial work, resume, handoff, or merge, run the repo freshness gate defined in `workflow/core/GIT_OPERATIONS.md` or the target repo's adapted equivalent.
+
+Accepted operating-model, workflow, product, and architecture truth should be merged to remote main promptly after acceptance.
+
+## 16. Execution processes require ownership
 
 Local execution processes are part of the execution surface.
 

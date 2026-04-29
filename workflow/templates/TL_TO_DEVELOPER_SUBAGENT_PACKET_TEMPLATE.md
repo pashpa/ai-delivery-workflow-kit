@@ -2,9 +2,12 @@
 
 Use this for normal delegated developer launches.
 
-## 1. Stage truth
+## 1. Task truth
 
-- Track or feature / stage:
+- Initiative:
+- Track:
+- Lane:
+- Task:
 - Canonical task doc:
 - Current status:
 
@@ -26,7 +29,7 @@ Use this for normal delegated developer launches.
 Short context:
 
 - what already exists;
-- why this stage is canonical;
+- why this Task is canonical;
 - what must not be lost.
 
 Supporting docs:

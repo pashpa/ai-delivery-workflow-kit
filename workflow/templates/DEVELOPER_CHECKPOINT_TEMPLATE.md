@@ -7,8 +7,11 @@ Owner: Developer
 ## 1. Context
 
 - DEV_TASK:
-- Track or feature / stage:
-- Stage mode:
+- Initiative:
+- Track:
+- Lane:
+- Task:
+- Task mode:
 
 ## 2. What was done
 
@@ -79,7 +82,7 @@ Owner: Developer
 
 ## 8.1 Investigation verdict
 
-Fill only for investigation stages.
+Fill only for investigation Tasks.
 
 - issue reproduced:
 - repro actually used:

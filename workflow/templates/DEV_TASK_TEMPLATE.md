@@ -4,9 +4,11 @@ Date: YYYY-MM-DD
 Status: draft
 Owner: Tech Lead
 Executor: Developer
-Track or feature: `<name>`
-Stage: `<name>`
-Stage mode:
+Initiative: `<name>`
+Track: `<name>`
+Lane: `<name>`
+Task: `<name>`
+Task mode:
 
 - `implementation`
 - `investigation`
@@ -23,12 +25,12 @@ Stage mode:
 Short context:
 
 - what already exists;
-- why this stage is current;
+- why this Task is current;
 - why this path is canonical.
 
 Packaging mode:
 
-- `per-stage PR`
+- `per-task PR`
 - `batched package`
 - other:
 
@@ -65,7 +67,7 @@ If not needed, write `N/A`.
 
 Before coding starts, the Developer must confirm:
 
-- stage understood;
+- Task understood;
 - execution surface understood;
 - base understood;
 - scope and non-goals understood;
@@ -83,7 +85,7 @@ Before coding starts, the Developer must confirm:
 2. ...
 3. ...
 
-For investigation stages, make the acceptance investigation-shaped:
+For investigation Tasks, make the acceptance investigation-shaped:
 
 - issue reproduced or disproved honestly;
 - root cause proven or narrowed honestly;
@@ -121,13 +123,13 @@ Stop and return the task if:
 - scope must expand;
 - auth, schema, contracts, or runtime model must change;
 - acceptance cannot be closed without a new path;
-- the stage needs a new decision;
+- the Task needs a new decision;
 - freshness gate blocks safe continuation;
 - required evidence is impossible through the defined path.
 
 ## 11. Definition of done
 
-The stage is done when:
+The Task is done when:
 
 - acceptance is closed;
 - checkpoint evidence is attached;

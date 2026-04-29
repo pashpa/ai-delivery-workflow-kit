@@ -4,11 +4,13 @@ Date: YYYY-MM-DD
 Status: draft
 Owner: Developer
 
-## 1. Stage truth
+## 1. Task truth
 
-- Track or feature:
-- Stage:
-- Stage mode:
+- Initiative:
+- Track:
+- Lane:
+- Task:
+- Task mode:
 - Canonical task doc:
 
 ## 2. Execution surface

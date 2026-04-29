@@ -5,7 +5,7 @@ Use this before non-trivial PM work or PM-side delegation.
 ## 1. Topic
 
 - Feature, product topic, or surface:
-- PM stage type:
+- PM work mode:
   - `research`
   - `decision`
   - `doc sync`

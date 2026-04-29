@@ -2,7 +2,7 @@
 
 Status: Active
 
-This document defines how the Developer role takes a stage and what it must return at checkpoint.
+This document defines how the Developer role takes a Task and what it must return at checkpoint.
 
 The Developer role may be performed by:
 
@@ -28,7 +28,7 @@ Before coding starts, the Developer should return a short `Start Ack`.
 
 Minimum `Start Ack`:
 
-- track or feature and stage understood;
+- Initiative, Track, Lane, and Task understood when applicable;
 - execution surface identified;
 - base branch or base commit understood;
 - scope and non-goals understood;
@@ -36,7 +36,7 @@ Minimum `Start Ack`:
 - checkpoint package understood;
 - blockers on start: `none` or explicit.
 
-Without `Start Ack`, the stage should not be treated as truly started.
+Without `Start Ack`, the Task should not be treated as truly started.
 
 Canonical format:
 
@@ -87,7 +87,7 @@ Minimum checkpoint package:
 - runtime evidence if applicable;
 - open blockers and next-step recommendation.
 
-Investigation stages must also state:
+Investigation Tasks must also state:
 
 - whether the issue was reproduced;
 - which hypothesis was tested;

@@ -5,10 +5,16 @@ This repository is `workflow-first`.
 Canonical workflow truth lives in:
 
 - `workflow/core/WORKFLOW_CONSTITUTION.md`
+- `workflow/core/OPERATING_MODEL.md`
 - `workflow/core/PROJECT_WORKFLOW.md`
 - `workflow/core/TRACEABILITY_RULES.md`
+- `workflow/core/DOCUMENTATION_OWNERSHIP.md`
+- `workflow/core/GIT_OPERATIONS.md`
+- `workflow/roles/CTO_WORKFLOW.md`
+- `workflow/roles/PM_WORKFLOW.md`
 - `workflow/roles/TECH_LEAD_WORKFLOW.md`
 - `workflow/roles/DEVELOPER_WORKFLOW.md`
+- `workflow/roles/QA_WORKFLOW.md`
 
 If chat guidance conflicts with these docs, follow the repo docs unless the user explicitly overrides them.
 
@@ -40,14 +46,15 @@ If your environment or team does not use worktrees, the same rule still applies 
 ## Core operating rules
 
 1. Do not use local `main` as the normal execution surface for active work.
-2. Do not leave the repo in an unfinished git state:
+2. Run the freshness gate from `workflow/core/GIT_OPERATIONS.md` before non-trivial work, resume, handoff, and merge.
+3. Do not leave the repo in an unfinished git state:
    - unresolved merge
    - half-finished rebase
    - half-finished cherry-pick
    - staged merge resolution left behind
-3. If you start `git merge`, `git rebase`, or `git cherry-pick`, finish or abort it in the same work cycle.
-4. Do not leave unrelated local changes in a feature branch.
-5. Do not mix multiple tracks in one package unless that package is explicitly meant to normalize or consolidate already-related work.
+4. If you start `git merge`, `git rebase`, or `git cherry-pick`, finish or abort it in the same work cycle.
+5. Do not leave unrelated local changes in a feature branch.
+6. Do not mix multiple tracks in one package unless that package is explicitly meant to normalize or consolidate already-related work.
 
 ## Parallel work discipline
 
@@ -56,7 +63,7 @@ Assume parallel delivery exists or will exist.
 Because of that:
 
 1. assume another branch may merge while you are working;
-2. before resuming a stage after relevant merges, run the repo's freshness or rebase gate;
+2. before resuming a Task after relevant merges, run the repo's freshness or rebase gate;
 3. keep branch truth isolated:
    - one bounded task per branch/package
    - one execution surface per active task
@@ -92,6 +99,17 @@ Rules:
 2. a merged PR is not automatically `track-closed`;
 3. track closure requires an explicit closure decision, not just a merged diff;
 4. if the packaging strategy is unclear, stop and define it before work spreads across branches.
+
+## Work hierarchy
+
+Canonical work hierarchy for new work:
+
+1. Initiative
+2. Track
+3. Lane
+4. Task
+
+Checkpoint and Review are not hierarchy levels by default. Track them inside the owning Task or Lane doc unless a linked standalone artifact is needed.
 
 ## Browser QA
 

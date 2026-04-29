@@ -6,12 +6,14 @@ This repository is not a dump of one team's private process. It is a clean, publ
 
 Use it when you want an agent to install a structured workflow into a software repository and then work inside that repository with:
 
-- clear PM -> Tech Lead -> Developer handoffs;
-- stage-based delivery;
+- clear CTO / Program Architect -> PM -> Tech Lead -> Developer handoffs;
+- product-first delivery;
+- explicit Initiative -> Track -> Lane -> Task work hierarchy;
 - explicit documentation truth;
 - reviewable checkpoints;
 - controlled delegation to subagents;
-- branch/worktree/process discipline.
+- branch/worktree/process discipline;
+- git freshness and merge lifecycle discipline.
 
 ## What this repo is for
 
@@ -37,7 +39,7 @@ Why only one baseline:
 
 That baseline assumes:
 
-- explicit PM -> Tech Lead -> Developer handoffs;
+- explicit CTO / Program Architect, PM, Tech Lead, Developer, QA, and Reviewer responsibilities;
 - canonical task docs;
 - start acknowledgements;
 - checkpoints and factual review;
@@ -50,12 +52,17 @@ That baseline assumes:
 - [`workflow/core/WORKFLOW_CONSTITUTION.md`](workflow/core/WORKFLOW_CONSTITUTION.md)
 - [`workflow/core/PROJECT_WORKFLOW.md`](workflow/core/PROJECT_WORKFLOW.md)
 - [`workflow/core/TRACEABILITY_RULES.md`](workflow/core/TRACEABILITY_RULES.md)
+- [`workflow/core/OPERATING_MODEL.md`](workflow/core/OPERATING_MODEL.md)
+- [`workflow/core/DOCUMENTATION_OWNERSHIP.md`](workflow/core/DOCUMENTATION_OWNERSHIP.md)
+- [`workflow/core/GIT_OPERATIONS.md`](workflow/core/GIT_OPERATIONS.md)
+- [`workflow/roles/CTO_WORKFLOW.md`](workflow/roles/CTO_WORKFLOW.md)
 - [`workflow/roles/PM_WORKFLOW.md`](workflow/roles/PM_WORKFLOW.md)
 - [`workflow/roles/PM_ONBOARDING.md`](workflow/roles/PM_ONBOARDING.md)
 - [`workflow/roles/TECH_LEAD_WORKFLOW.md`](workflow/roles/TECH_LEAD_WORKFLOW.md)
 - [`workflow/roles/TECH_LEAD_ONBOARDING.md`](workflow/roles/TECH_LEAD_ONBOARDING.md)
 - [`workflow/roles/DEVELOPER_WORKFLOW.md`](workflow/roles/DEVELOPER_WORKFLOW.md)
 - [`workflow/roles/DEVELOPER_ONBOARDING.md`](workflow/roles/DEVELOPER_ONBOARDING.md)
+- [`workflow/roles/QA_WORKFLOW.md`](workflow/roles/QA_WORKFLOW.md)
 - [`workflow/templates/`](workflow/templates)
 - [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md)
 - [`install/AGENT_ADOPTION_PROMPT.md`](install/AGENT_ADOPTION_PROMPT.md)
@@ -84,7 +91,8 @@ This kit optimizes for:
 - reproducibility over chat-only improvisation;
 - explicit truth over memory;
 - clear handoffs over vague role overlap;
-- bounded stages over sprawling work;
+- bounded tasks and lanes over sprawling work;
+- role-local context over one overloaded agent context;
 - strong default models over premature cost optimization.
 
 This kit does not try to be:

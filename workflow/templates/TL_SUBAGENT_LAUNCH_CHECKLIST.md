@@ -12,18 +12,21 @@ Purpose:
 
 Use this checklist:
 
-- before the first delegated launch on a non-trivial stage;
+- before the first delegated launch on a non-trivial Task;
 - before relaunch with a new bounded subtask;
 - after context compression;
 - after a new session or long pause.
 
 If the checklist is not completed, treat the launch as invalid.
 
-## 1. Canonical stage truth
+## 1. Canonical Task truth
 
-- Track or feature / stage:
+- Initiative:
+- Track:
+- Lane:
+- Task:
 - Canonical task doc:
-- Current stage status:
+- Current Task status:
 - Packaging mode:
 
 ## 2. Execution target
@@ -67,7 +70,7 @@ Confirm before launch:
 
 Require the delegated execution to return at least:
 
-- track or feature / stage;
+- Initiative, Track, Lane, and Task;
 - execution surface;
 - current base commit;
 - `model = GPT-5.5`
