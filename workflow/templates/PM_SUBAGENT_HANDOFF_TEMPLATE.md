@@ -2,10 +2,10 @@
 
 Use this when PM delegates bounded PM-owned work to a subagent.
 
-## 1. PM stage
+## 1. PM work mode
 
 - Topic:
-- PM stage type:
+- PM work mode:
 - Current status:
 
 ## 2. Goal

@@ -4,23 +4,23 @@ Status: Active
 
 This document defines how work should stay traceable across docs, execution, and review.
 
-## 1. Every stage must point backward
+## 1. Every Task must point backward
 
-Every active stage should link to:
+Every active Task should link to:
 
 - its product context;
 - its technical context;
-- its current task document.
+- its current Lane or Track document when applicable.
 
-## 2. Every stage must point forward
+## 2. Every Task must point forward
 
-Every active stage should make the next reviewable artifact obvious:
+Every active Task should make the next reviewable artifact obvious:
 
 - checkpoint;
 - PR;
 - review memo;
 - blocker verdict;
-- next stage.
+- next Task, Lane, or Track.
 
 ## 3. Task docs are canonical execution anchors
 
@@ -28,7 +28,13 @@ Execution should not depend on chat reconstruction.
 
 The canonical execution anchor is the task document, not a long thread.
 
-## 4. Handoffs must preserve critical clauses
+## 4. Track and Lane docs prevent context overload
+
+Track and Lane docs should summarize only the context needed by their executors.
+
+Do not force every agent to read every project document if a bounded handoff can preserve the critical clauses.
+
+## 5. Handoffs must preserve critical clauses
 
 When a task is handed off, do not drop:
 
@@ -39,7 +45,7 @@ When a task is handed off, do not drop:
 - evidence requirements;
 - freshness or sync gates if they exist.
 
-## 5. Checkpoints must be reviewable
+## 6. Checkpoints must be reviewable
 
 A checkpoint must make factual review possible.
 
@@ -51,7 +57,16 @@ That means it should include:
 - acceptance status;
 - open blockers or risks.
 
-## 6. Old truth must not compete with current truth
+## 7. Reviews must be linked
+
+A review must link to:
+
+- the checkpoint or package reviewed;
+- the acceptance criteria used;
+- checks or evidence considered;
+- the formal outcome.
+
+## 8. Old truth must not compete with current truth
 
 If a plan, note, or path is obsolete, mark it.
 

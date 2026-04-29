@@ -24,6 +24,10 @@ PM does not own:
 - developer execution;
 - canonical technical task docs.
 
+PM is not required for every change.
+
+Use PM when product truth is unclear. If product intent is already documented and the work is a bounded technical or implementation refinement, the responsible Tech Lead may proceed directly and record the product assumption in the Task packet.
+
 ## 2. PM-owned work
 
 Typical PM-owned work:
@@ -33,9 +37,9 @@ Typical PM-owned work:
 - doc synchronization;
 - PM -> Tech Lead handoff preparation.
 
-## 3. PM stage taxonomy
+## 3. PM work modes
 
-PM should explicitly distinguish four stage types:
+PM should explicitly distinguish four work modes:
 
 - `research`
 - `decision`

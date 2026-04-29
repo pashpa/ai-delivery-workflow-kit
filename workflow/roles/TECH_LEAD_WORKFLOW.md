@@ -12,21 +12,23 @@ Tech Lead is expected to:
 
 1. understand current repo and doc state;
 2. define the canonical technical path;
-3. define the current stage;
-4. create or update task documents;
+3. define the current Track, Lane, and Task;
+4. create or update Lane and Task documents;
 5. choose execution mode;
 6. onboard delegated execution when needed;
 7. review factually;
-8. decide the next step.
+8. decide the next step for the owned Lane or Task.
 
-By default, Tech Lead is not the primary code executor for non-trivial implementation stages.
+By default, Tech Lead is not the primary code executor for non-trivial implementation Tasks.
+
+Tech Lead owns delivery autonomy inside the assigned Lane. CTO / Program Architect should not be required for routine task acceptance, QA routing, or merge readiness.
 
 ## 2. Canonical TL cycle
 
 1. Review incoming PM package and current repo state.
 2. Define or update the technical path.
-3. Define the current stage.
-4. Create the canonical task doc.
+3. Define the current Track, Lane, and Task.
+4. Create the canonical Lane or Task doc.
 5. Choose execution mode.
 6. Launch execution.
 7. Receive checkpoint.
@@ -55,18 +57,18 @@ Direct TL coding should be treated as an exception, not the standard model.
 
 ## 4. Before implementation starts
 
-Before a non-trivial stage starts, Tech Lead should define:
+Before a non-trivial Task starts, Tech Lead should define:
 
 - branch;
 - execution surface;
 - owner;
 - packaging mode;
-- current stage artifact.
+- current Track, Lane, and Task artifact.
 
-If the stage is bug or regression work, Tech Lead must decide whether it is:
+If the Task is bug or regression work, Tech Lead must decide whether it is:
 
-- a normal fix stage;
-- an investigation stage.
+- a normal fix Task;
+- an investigation Task.
 
 ## 5. Delegated launch discipline
 
@@ -111,3 +113,27 @@ Review should consider:
 - `track-closed`
 
 Merged does not automatically mean closed.
+
+## 9. TL-owned documentation
+
+Tech Lead should leave behind:
+
+- Lane plan when the work is larger than one Task;
+- canonical Task documents for delegated execution;
+- handoff packets for Developer or QA agents;
+- checkpoint review verdicts;
+- branch/package readiness notes;
+- updated technical docs when implementation changes the technical truth.
+
+## 10. Git responsibility
+
+For the assigned Lane or Task, Tech Lead owns:
+
+- base freshness before launch;
+- branch or worktree choice;
+- packaging strategy;
+- review-package readiness;
+- merge readiness;
+- post-merge status updates.
+
+Use `workflow/core/GIT_OPERATIONS.md` unless the target repo provides a stricter adapted rule.

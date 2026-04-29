@@ -17,11 +17,15 @@ What you must do:
 6. Do not import unnecessary process overhead.
 7. Preserve the core operating model:
    - docs are canonical truth
-   - PM -> TL -> Developer loop
-   - task docs
+   - CTO / Program Architect is a workflow and escalation role, not a routine TL replacement
+   - product-first flow when product truth is unclear
+   - PM -> TL -> Developer loop when PM work is needed
+   - TL-direct route when product truth is already documented or the work is purely technical
+   - Initiative -> Track -> Lane -> Task hierarchy
+   - task docs and role handoffs
    - checkpoints
    - factual review
-   - clear git hygiene and packaging truth
+   - git freshness, branch lifecycle, merge discipline, and packaging truth
 8. At the end, report:
    - installed operating baseline
    - files added or changed

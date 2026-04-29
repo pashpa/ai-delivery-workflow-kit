@@ -53,11 +53,11 @@ Choose exactly one:
 
 ## 7. Next step
 
-- next stage or correction path
+- next Task, Lane, Track, or correction path
 
 ## 8. Docs to update
 
-- current stage
+- current Task, Lane, or Track
 - status
 - historical or superseded marks
 - plans or checklists

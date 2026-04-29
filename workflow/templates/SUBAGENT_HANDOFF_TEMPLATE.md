@@ -2,9 +2,12 @@
 
 Use this when Tech Lead delegates bounded work directly to a subagent.
 
-## 1. Canonical stage
+## 1. Canonical Task
 
-- Track or feature / stage:
+- Initiative:
+- Track:
+- Lane:
+- Task:
 - Canonical task doc:
 - Current status:
 
@@ -36,7 +39,7 @@ Use this when Tech Lead delegates bounded work directly to a subagent.
 
 ## 7. Freshness or sync gate
 
-- `N/A` or exact resume rule for this stage
+- `N/A` or exact resume rule for this Task
 
 ## 8. Expected artifact back
 

@@ -40,21 +40,31 @@ Reason:
 Install:
 
 - `workflow/core/WORKFLOW_CONSTITUTION.md`
+- `workflow/core/OPERATING_MODEL.md`
 - `workflow/core/PROJECT_WORKFLOW.md`
 - `workflow/core/TRACEABILITY_RULES.md`
+- `workflow/core/DOCUMENTATION_OWNERSHIP.md`
+- `workflow/core/GIT_OPERATIONS.md`
+- `workflow/roles/CTO_WORKFLOW.md`
 - `workflow/roles/PM_WORKFLOW.md`
 - `workflow/roles/PM_ONBOARDING.md`
 - `workflow/roles/TECH_LEAD_WORKFLOW.md`
 - `workflow/roles/TECH_LEAD_ONBOARDING.md`
 - `workflow/roles/DEVELOPER_WORKFLOW.md`
 - `workflow/roles/DEVELOPER_ONBOARDING.md`
+- `workflow/roles/QA_WORKFLOW.md`
 - `workflow/templates/DEV_TASK_TEMPLATE.md`
+- `workflow/templates/TRACK_PLAN_TEMPLATE.md`
+- `workflow/templates/LANE_PLAN_TEMPLATE.md`
 - `workflow/templates/INVESTIGATION_TASK_TEMPLATE.md`
 - `workflow/templates/START_ACK_TEMPLATE.md`
 - `workflow/templates/DEVELOPER_CHECKPOINT_TEMPLATE.md`
+- `workflow/templates/QA_VALIDATION_REQUEST_TEMPLATE.md`
+- `workflow/templates/QA_CHECKPOINT_TEMPLATE.md`
 - `workflow/templates/TECH_LEAD_REVIEW_TEMPLATE.md`
 - `workflow/templates/PM_LAUNCH_CHECKLIST.md`
 - `workflow/templates/PM_TO_TECH_LEAD_HANDOFF_TEMPLATE.md`
+- `workflow/templates/CTO_TO_TL_HANDOFF_TEMPLATE.md`
 - `workflow/templates/PM_SUBAGENT_HANDOFF_TEMPLATE.md`
 - `workflow/templates/SUBAGENT_HANDOFF_TEMPLATE.md`
 - `workflow/templates/TL_SUBAGENT_LAUNCH_CHECKLIST.md`
@@ -79,6 +89,7 @@ The target repo root `AGENTS.md` should:
 
 - point to the installed workflow docs;
 - define root execution-surface rules;
+- define the freshness gate;
 - define git hygiene and packaging truth;
 - define any repo-specific QA or runtime rules.
 
@@ -88,8 +99,10 @@ When installation finishes, the target repo should make these things explicit:
 
 - installed workflow baseline;
 - default branch expectations;
+- canonical Initiative -> Track -> Lane -> Task hierarchy;
 - whether dedicated worktrees are required or only recommended;
 - default delivery model and reasoning baseline;
+- whether PM is always required or only used when product truth is unclear;
 - browser QA expectations if UI work exists.
 
 ## 7. Do not over-install
