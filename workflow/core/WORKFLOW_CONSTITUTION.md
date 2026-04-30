@@ -172,6 +172,7 @@ The process must survive context compression and new participants.
 
 That means the workflow must use:
 
+- separate agent contexts for separate responsibilities;
 - explicit current Initiative, Track, Lane, and Task where applicable;
 - explicit related docs;
 - standard handoff artifacts;
