@@ -5,11 +5,14 @@ This repository is `workflow-first`.
 Canonical workflow truth lives in:
 
 - `workflow/core/WORKFLOW_CONSTITUTION.md`
+- `workflow/BASELINE.md`
 - `workflow/core/OPERATING_MODEL.md`
+- `workflow/core/AGENT_CONTEXT_RULES.md`
 - `workflow/core/PROJECT_WORKFLOW.md`
 - `workflow/core/TRACEABILITY_RULES.md`
 - `workflow/core/DOCUMENTATION_OWNERSHIP.md`
 - `workflow/core/GIT_OPERATIONS.md`
+- `workflow/core/GIT_COOKBOOK.md`
 - `workflow/roles/CTO_WORKFLOW.md`
 - `workflow/roles/PM_WORKFLOW.md`
 - `workflow/roles/TECH_LEAD_WORKFLOW.md`
@@ -110,6 +113,14 @@ Canonical work hierarchy for new work:
 4. Task
 
 Checkpoint and Review are not hierarchy levels by default. Track them inside the owning Task or Lane doc unless a linked standalone artifact is needed.
+
+## Agent Context Rule
+
+Use separate agent contexts for separate responsibilities.
+
+Do not collapse CTO / Program Architect, PM, Tech Lead, Developer, QA, review, and release work into one long-running agent context.
+
+Default execution baseline is GPT-5.5 with medium reasoning. If the baseline changes, update the repo-level workflow docs explicitly.
 
 ## Browser QA
 

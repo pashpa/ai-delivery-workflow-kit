@@ -4,11 +4,24 @@ A reusable workflow kit for AI-assisted software delivery.
 
 This repository is not a dump of one team's private process. It is a clean, public workflow system derived from real delivery practice and rewritten as a reusable kit.
 
+## Start here
+
+Most users should not read every file first.
+
+If you are building a product with Codex App, open [`QUICKSTART.md`](QUICKSTART.md), copy the install prompt, and give your agent:
+
+- this repo URL;
+- your product repo;
+- the instruction to install the workflow and stop before product implementation.
+
+The agent should install the docs, root `AGENTS.md`, current work index, role rules, templates, and git rules into your repo.
+
 Use it when you want an agent to install a structured workflow into a software repository and then work inside that repository with:
 
 - clear CTO / Program Architect -> PM -> Tech Lead -> Developer handoffs;
 - product-first delivery;
 - explicit Initiative -> Track -> Lane -> Task work hierarchy;
+- strict separation of agent contexts by role;
 - explicit documentation truth;
 - reviewable checkpoints;
 - controlled delegation to subagents;
@@ -40,21 +53,33 @@ Why only one baseline:
 That baseline assumes:
 
 - explicit CTO / Program Architect, PM, Tech Lead, Developer, QA, and Reviewer responsibilities;
+- separate agent contexts for separate responsibilities;
 - canonical task docs;
 - start acknowledgements;
 - checkpoints and factual review;
 - launch checklists for PM and TL;
 - branch/worktree/process discipline.
 
+Default model baseline:
+
+- model: `GPT-5.5`
+- reasoning: `medium`
+
+If you want a different model, ask the CTO / workflow owner agent to update the repo-level baseline. Individual agents should not silently change model choices per task.
+
 ## Repository structure
 
+- [`QUICKSTART.md`](QUICKSTART.md)
 - [`workflow/README.md`](workflow/README.md)
+- [`workflow/BASELINE.md`](workflow/BASELINE.md)
 - [`workflow/core/WORKFLOW_CONSTITUTION.md`](workflow/core/WORKFLOW_CONSTITUTION.md)
 - [`workflow/core/PROJECT_WORKFLOW.md`](workflow/core/PROJECT_WORKFLOW.md)
 - [`workflow/core/TRACEABILITY_RULES.md`](workflow/core/TRACEABILITY_RULES.md)
 - [`workflow/core/OPERATING_MODEL.md`](workflow/core/OPERATING_MODEL.md)
+- [`workflow/core/AGENT_CONTEXT_RULES.md`](workflow/core/AGENT_CONTEXT_RULES.md)
 - [`workflow/core/DOCUMENTATION_OWNERSHIP.md`](workflow/core/DOCUMENTATION_OWNERSHIP.md)
 - [`workflow/core/GIT_OPERATIONS.md`](workflow/core/GIT_OPERATIONS.md)
+- [`workflow/core/GIT_COOKBOOK.md`](workflow/core/GIT_COOKBOOK.md)
 - [`workflow/roles/CTO_WORKFLOW.md`](workflow/roles/CTO_WORKFLOW.md)
 - [`workflow/roles/PM_WORKFLOW.md`](workflow/roles/PM_WORKFLOW.md)
 - [`workflow/roles/PM_ONBOARDING.md`](workflow/roles/PM_ONBOARDING.md)
@@ -66,17 +91,17 @@ That baseline assumes:
 - [`workflow/templates/`](workflow/templates)
 - [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md)
 - [`install/AGENT_ADOPTION_PROMPT.md`](install/AGENT_ADOPTION_PROMPT.md)
-- [`adapters/CANONICAL_BASELINE.md`](adapters/CANONICAL_BASELINE.md)
 
 ## Minimal adoption path
 
 If you want to install this into another repo:
 
-1. Read [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md).
-2. Use the canonical baseline doc as the installation baseline.
+1. Read [`QUICKSTART.md`](QUICKSTART.md).
+2. Use [`workflow/BASELINE.md`](workflow/BASELINE.md) as the installation baseline.
 3. Copy and adapt the workflow docs into the target repo.
 4. Rewrite the target repo root `AGENTS.md` so that it points to the installed workflow docs.
-5. Start using the role docs and templates immediately.
+5. Add a `CURRENT_WORK.md` index from [`workflow/templates/CURRENT_WORK_TEMPLATE.md`](workflow/templates/CURRENT_WORK_TEMPLATE.md).
+6. Start using the role docs and templates immediately.
 
 If you want an agent to do the installation for you:
 
@@ -91,8 +116,8 @@ This kit optimizes for:
 - reproducibility over chat-only improvisation;
 - explicit truth over memory;
 - clear handoffs over vague role overlap;
+- separated agent contexts over one overloaded thread;
 - bounded tasks and lanes over sprawling work;
-- role-local context over one overloaded agent context;
 - strong default models over premature cost optimization.
 
 This kit does not try to be:
@@ -103,4 +128,4 @@ This kit does not try to be:
 
 ## Suggested next step
 
-- Start with [`adapters/CANONICAL_BASELINE.md`](adapters/CANONICAL_BASELINE.md) and install it as the canonical workflow baseline.
+- Start with [`QUICKSTART.md`](QUICKSTART.md).

@@ -165,7 +165,9 @@ For normal delivery work, the default execution baseline is:
 - model: `GPT-5.5`
 - reasoning: `medium`
 
-If a team changes this baseline, it should do so explicitly at repo level rather than silently per task.
+If a team changes this baseline, the CTO / workflow owner agent should update it explicitly at repo level.
+
+Individual agents should not silently change model choices per task.
 
 ## 8. Launch rituals
 

@@ -15,6 +15,16 @@ The workflow must therefore:
 - split work across role-owned agents so one agent does not carry unrelated context;
 - make handoffs explicit enough that a new agent can continue from docs instead of reconstructing history.
 
+## 1.1 Agent context separation
+
+Serious work should use separate agent contexts for separate responsibilities.
+
+Do not collapse CTO / Program Architect, PM, Tech Lead, Developer, QA, review, and release work into one long-running agent thread.
+
+This is not optional process overhead. It is how the workflow protects context quality.
+
+One human may coordinate the whole product, but each agent should still receive role-specific context and bounded work.
+
 ## 2. Canonical work hierarchy
 
 New work uses this hierarchy:

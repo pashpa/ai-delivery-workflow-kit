@@ -6,14 +6,17 @@ This folder contains the installable workflow system.
 
 ### Core
 
+- `workflow/BASELINE.md`
 - `workflow/core/WORKFLOW_CONSTITUTION.md`
+- `workflow/core/OPERATING_MODEL.md`
+- `workflow/core/AGENT_CONTEXT_RULES.md`
 - `workflow/core/PROJECT_WORKFLOW.md`
 - `workflow/core/TRACEABILITY_RULES.md`
-- `workflow/core/OPERATING_MODEL.md`
 - `workflow/core/DOCUMENTATION_OWNERSHIP.md`
 - `workflow/core/GIT_OPERATIONS.md`
+- `workflow/core/GIT_COOKBOOK.md`
 
-These files define the non-negotiable rules, the global operating model, the main delivery loop, traceability expectations, documentation ownership, and git operations.
+These files define the baseline, non-negotiable rules, global operating model, agent context separation rules, main delivery loop, traceability expectations, documentation ownership, and git operations.
 
 ### Roles
 
@@ -31,6 +34,8 @@ These files define who owns what and how new participants should enter the proce
 ### Templates
 
 - CTO to TL handoff template
+- root AGENTS.md template
+- current work index template
 - PM launch checklist
 - PM handoff templates
 - Track plan template
@@ -51,12 +56,15 @@ These files are the operating layer. They are meant to be copied and used, not j
 For first-time use:
 
 1. `workflow/core/WORKFLOW_CONSTITUTION.md`
-2. `workflow/core/OPERATING_MODEL.md`
-3. `workflow/core/PROJECT_WORKFLOW.md`
-4. `workflow/core/DOCUMENTATION_OWNERSHIP.md`
-5. `workflow/core/GIT_OPERATIONS.md`
-6. role doc for the current role
-7. relevant templates for the current Track, Lane, or Task
+2. `workflow/BASELINE.md`
+3. `workflow/core/OPERATING_MODEL.md`
+4. `workflow/core/AGENT_CONTEXT_RULES.md`
+5. `workflow/core/PROJECT_WORKFLOW.md`
+6. `workflow/core/DOCUMENTATION_OWNERSHIP.md`
+7. `workflow/core/GIT_OPERATIONS.md`
+8. `workflow/core/GIT_COOKBOOK.md`
+9. role doc for the current role
+10. relevant templates for the current Track, Lane, or Task
 
 ## Installation note
 

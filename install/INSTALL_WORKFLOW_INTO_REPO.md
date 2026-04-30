@@ -10,6 +10,7 @@ After installation, the target repo should have:
 - role docs;
 - templates;
 - root `AGENTS.md` wired to the workflow;
+- `CURRENT_WORK.md` or an equivalent current work index;
 - one explicit canonical workflow baseline.
 
 ## 1. Inspect the target repo first
@@ -18,7 +19,7 @@ Before copying anything, inspect:
 
 - repo size and shape;
 - whether it is app, service, library, or mixed;
-- whether work is mostly solo or parallel;
+- whether one human will coordinate several agent roles or several humans/agents will work in parallel;
 - whether the repo already has any workflow docs;
 - whether the repo already uses worktrees, PR packages, and role separation.
 
@@ -39,12 +40,15 @@ Reason:
 
 Install:
 
+- `workflow/BASELINE.md`
 - `workflow/core/WORKFLOW_CONSTITUTION.md`
+- `workflow/core/AGENT_CONTEXT_RULES.md`
 - `workflow/core/OPERATING_MODEL.md`
 - `workflow/core/PROJECT_WORKFLOW.md`
 - `workflow/core/TRACEABILITY_RULES.md`
 - `workflow/core/DOCUMENTATION_OWNERSHIP.md`
 - `workflow/core/GIT_OPERATIONS.md`
+- `workflow/core/GIT_COOKBOOK.md`
 - `workflow/roles/CTO_WORKFLOW.md`
 - `workflow/roles/PM_WORKFLOW.md`
 - `workflow/roles/PM_ONBOARDING.md`
@@ -62,6 +66,8 @@ Install:
 - `workflow/templates/QA_VALIDATION_REQUEST_TEMPLATE.md`
 - `workflow/templates/QA_CHECKPOINT_TEMPLATE.md`
 - `workflow/templates/TECH_LEAD_REVIEW_TEMPLATE.md`
+- `workflow/templates/ROOT_AGENTS_TEMPLATE.md`
+- `workflow/templates/CURRENT_WORK_TEMPLATE.md`
 - `workflow/templates/PM_LAUNCH_CHECKLIST.md`
 - `workflow/templates/PM_TO_TECH_LEAD_HANDOFF_TEMPLATE.md`
 - `workflow/templates/CTO_TO_TL_HANDOFF_TEMPLATE.md`
@@ -70,6 +76,7 @@ Install:
 - `workflow/templates/TL_SUBAGENT_LAUNCH_CHECKLIST.md`
 - `workflow/templates/TL_TO_DEVELOPER_SUBAGENT_PACKET_TEMPLATE.md`
 - root `AGENTS.md`
+- root `CURRENT_WORK.md`
 
 ## 4. Adapt the wording to the target repo
 
@@ -88,6 +95,8 @@ Adapt:
 The target repo root `AGENTS.md` should:
 
 - point to the installed workflow docs;
+- require separate agent contexts by role;
+- state the GPT-5.5 model baseline;
 - define root execution-surface rules;
 - define the freshness gate;
 - define git hygiene and packaging truth;
@@ -100,8 +109,9 @@ When installation finishes, the target repo should make these things explicit:
 - installed workflow baseline;
 - default branch expectations;
 - canonical Initiative -> Track -> Lane -> Task hierarchy;
+- separate agent context rule;
 - whether dedicated worktrees are required or only recommended;
-- default delivery model and reasoning baseline;
+- GPT-5.5 default model and reasoning baseline;
 - whether PM is always required or only used when product truth is unclear;
 - browser QA expectations if UI work exists.
 
@@ -113,7 +123,7 @@ Examples:
 
 - do not keep wording about worktrees if the target repo cannot or will not use them;
 - do not keep browser QA expectations in a backend-only service unless they are truly needed;
-- do not keep references to roles the target team will not actually use without renaming or collapsing them.
+- do not rename role labels without preserving the separate agent responsibilities.
 
 ## 8. Final installation output
 

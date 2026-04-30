@@ -4,6 +4,8 @@ Status: Active
 
 This document defines git discipline for multi-agent and multi-machine delivery.
 
+For concrete commands, use `workflow/core/GIT_COOKBOOK.md`.
+
 ## 1. Freshness gate
 
 Assume the remote repository may be ahead of local state.

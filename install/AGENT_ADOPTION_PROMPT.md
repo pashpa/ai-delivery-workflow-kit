@@ -11,13 +11,16 @@ install an appropriate version of that workflow into this target repository so t
 What you must do:
 1. Inspect the target repository first.
 2. Install the canonical workflow baseline from the workflow kit.
-3. Copy and adapt only the workflow docs that fit this repo.
-4. Rewrite the target repo root `AGENTS.md` so it points to the installed workflow docs and reflects repo-specific execution rules.
-5. Do not copy public-kit wording blindly if it does not fit the target repo.
-6. Do not import unnecessary process overhead.
-7. Preserve the core operating model:
+3. Install a root `CURRENT_WORK.md` index from the kit template.
+4. Copy and adapt only the workflow docs that fit this repo.
+5. Rewrite the target repo root `AGENTS.md` so it points to the installed workflow docs and reflects repo-specific execution rules.
+6. Do not copy public-kit wording blindly if it does not fit the target repo.
+7. Do not import unnecessary process overhead.
+8. Preserve the core operating model:
    - docs are canonical truth
    - CTO / Program Architect is a workflow and escalation role, not a routine TL replacement
+   - separate agent contexts by role are required for serious work
+   - do not collapse product, TL, implementation, QA, and review into one long-running agent thread
    - product-first flow when product truth is unclear
    - PM -> TL -> Developer loop when PM work is needed
    - TL-direct route when product truth is already documented or the work is purely technical
@@ -26,7 +29,8 @@ What you must do:
    - checkpoints
    - factual review
    - git freshness, branch lifecycle, merge discipline, and packaging truth
-8. At the end, report:
+   - GPT-5.5 as the default model baseline
+9. At the end, report:
    - installed operating baseline
    - files added or changed
    - repo-specific adaptations made
