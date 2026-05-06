@@ -17,6 +17,9 @@ Every agent output must become one of:
 
 Important decisions should not remain only in chat.
 
+Use `workflow/policies/DOCUMENT_HYGIENE_POLICY.md` for status, placement,
+naming, superseded docs, and archive rules.
+
 ## 2. CTO / Program Architect outputs
 
 CTO / Program Architect owns:
@@ -118,7 +121,22 @@ Typical outputs:
 - screenshots, recordings, logs, or device/browser evidence when relevant;
 - residual risk and retest recommendation.
 
-## 9. Reviewer outputs
+## 9. Security Auditor outputs
+
+Security Auditor owns security findings and risk framing.
+
+Typical outputs:
+
+- security audit memo;
+- findings with severity;
+- affected surfaces and evidence;
+- recommended remediation;
+- open uncertainties;
+- verification recommendation.
+
+Security Auditor should not silently become the implementer for the same fix.
+
+## 10. Reviewer outputs
 
 Reviewer owns factual review verdict.
 

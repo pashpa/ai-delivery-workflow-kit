@@ -75,6 +75,11 @@ Before coding starts, the Developer must confirm:
 - checkpoint package understood;
 - blockers on start.
 
+Definition of Ready:
+
+- follow `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`;
+- if this Task is not ready, return to Tech Lead before implementation.
+
 ## 6. What not to touch
 
 - ...
@@ -99,6 +104,10 @@ State explicitly:
 - which evidence depends on CI, deploy, device, or external systems;
 - whether blockers are acceptable;
 - who owns unblock if the evidence path is external.
+- browser QA surface if UI is affected;
+- Computer Use preconditions if signed-in or real GUI flow is affected;
+- runtime/device proof requirements if the runtime itself is acceptance target;
+- post-merge validation requirements if merged/deployed proof is required.
 
 ## 9. What to bring at checkpoint
 
@@ -134,3 +143,4 @@ The Task is done when:
 - acceptance is closed;
 - checkpoint evidence is attached;
 - the result is reviewable by code, checks, and runtime proof when applicable.
+- Definition of Done in `workflow/policies/DEFINITION_OF_READY_AND_DONE.md` is satisfied.

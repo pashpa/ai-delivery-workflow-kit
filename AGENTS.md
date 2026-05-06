@@ -13,11 +13,19 @@ Canonical workflow truth lives in:
 - `workflow/core/DOCUMENTATION_OWNERSHIP.md`
 - `workflow/core/GIT_OPERATIONS.md`
 - `workflow/core/GIT_COOKBOOK.md`
+- `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
+- `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+- `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`
+- `workflow/policies/DOCUMENT_HYGIENE_POLICY.md`
+- `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`
+- `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`
+- `workflow/guides/STOP_AND_REPLAN_RUNBOOK.md`
 - `workflow/roles/CTO_WORKFLOW.md`
 - `workflow/roles/PM_WORKFLOW.md`
 - `workflow/roles/TECH_LEAD_WORKFLOW.md`
 - `workflow/roles/DEVELOPER_WORKFLOW.md`
 - `workflow/roles/QA_WORKFLOW.md`
+- `workflow/roles/SECURITY_AUDITOR_WORKFLOW.md`
 
 If chat guidance conflicts with these docs, follow the repo docs unless the user explicitly overrides them.
 
@@ -122,14 +130,26 @@ Do not collapse CTO / Program Architect, PM, Tech Lead, Developer, QA, review, a
 
 Default execution baseline is GPT-5.5 with medium reasoning. If the baseline changes, update the repo-level workflow docs explicitly.
 
+Before launching delegated implementation, use:
+
+- `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+- `workflow/templates/TL_SUBAGENT_LAUNCH_CHECKLIST.md`
+- `workflow/templates/TL_TO_DEVELOPER_SUBAGENT_PACKET_TEMPLATE.md`
+
+For non-trivial implementation, Tech Lead supervises and Developer executes unless
+the task is a documented exception.
+
 ## Browser QA
 
 Browser QA is evidence work, not casual eyeballing.
 
-1. Prefer documented QA flows and prompt templates.
-2. Use dedicated automation browsers or isolated automation profiles when possible.
-3. Do not use a user's ordinary browser profile as the default automation surface.
-4. If one browser automation path fails, use the repo's documented fallback instead of silently dropping QA.
+1. Use `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md` for browser-level UI QA.
+2. Prefer Codex in-app browser / Browser Use for local/public unauthenticated visual QA when available.
+3. Use Playwright or Chrome DevTools MCP for deterministic checks or fallback automation.
+4. Use `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md` only for scoped signed-in or real GUI flows where browser-level QA is insufficient.
+5. Use `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md` when acceptance depends on installed app, WebView, device, provider, payment, or runtime-specific behavior.
+6. Do not use a user's ordinary browser profile as the default automation surface.
+7. Do not claim branch, preview, or local screenshots as deployed or runtime proof.
 
 ## Test and process discipline
 

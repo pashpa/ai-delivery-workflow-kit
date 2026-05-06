@@ -18,6 +18,25 @@ This folder contains the installable workflow system.
 
 These files define the baseline, non-negotiable rules, global operating model, agent context separation rules, main delivery loop, traceability expectations, documentation ownership, and git operations.
 
+### Policies
+
+- `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
+- `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+- `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`
+- `workflow/policies/DOCUMENT_HYGIENE_POLICY.md`
+
+These files define start/finish gates, delegated execution rules, runtime
+validation boundaries, and document hygiene.
+
+### Guides
+
+- `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`
+- `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`
+- `workflow/guides/STOP_AND_REPLAN_RUNBOOK.md`
+
+These files define practical runbooks for browser QA, real GUI QA, and failed
+delivery paths.
+
 ### Roles
 
 - `workflow/roles/CTO_WORKFLOW.md`
@@ -28,8 +47,15 @@ These files define the baseline, non-negotiable rules, global operating model, a
 - `workflow/roles/DEVELOPER_WORKFLOW.md`
 - `workflow/roles/DEVELOPER_ONBOARDING.md`
 - `workflow/roles/QA_WORKFLOW.md`
+- `workflow/roles/SECURITY_AUDITOR_WORKFLOW.md`
 
 These files define who owns what and how new participants should enter the process.
+
+### Prompts
+
+- `workflow/prompts/PROMPT_BROWSER_QA_AGENT.md`
+
+Prompts are optional launch helpers for delegated agents.
 
 ### Templates
 
@@ -48,6 +74,8 @@ These files define who owns what and how new participants should enter the proce
 - delegated handoff templates
 - TL launch checklist
 - QA validation request and checkpoint templates
+- post-merge validation template
+- security audit memo template
 
 These files are the operating layer. They are meant to be copied and used, not just read once.
 
@@ -61,10 +89,12 @@ For first-time use:
 4. `workflow/core/AGENT_CONTEXT_RULES.md`
 5. `workflow/core/PROJECT_WORKFLOW.md`
 6. `workflow/core/DOCUMENTATION_OWNERSHIP.md`
-7. `workflow/core/GIT_OPERATIONS.md`
-8. `workflow/core/GIT_COOKBOOK.md`
-9. role doc for the current role
-10. relevant templates for the current Track, Lane, or Task
+7. `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
+8. `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+9. `workflow/core/GIT_OPERATIONS.md`
+10. `workflow/core/GIT_COOKBOOK.md`
+11. role doc for the current role
+12. relevant templates and guides for the current Track, Lane, or Task
 
 ## Installation note
 

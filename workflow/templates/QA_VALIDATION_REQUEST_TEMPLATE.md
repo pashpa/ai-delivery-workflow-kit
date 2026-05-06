@@ -13,6 +13,13 @@ Executor: QA
 - Task or package:
 - Branch / PR / commit:
 - Environment:
+- Validation target:
+  - `branch`
+  - `preview`
+  - `merged main`
+  - `deployed main`
+  - `production runtime`
+  - `real device/runtime`
 
 ## 2. Acceptance under test
 
@@ -39,6 +46,26 @@ Out of scope:
 - screenshots or recordings:
 - browser/device matrix:
 - CI evidence:
+- QA surface:
+  - `N/A`
+  - `Codex in-app browser`
+  - `Chrome DevTools MCP`
+  - `Playwright`
+  - `Computer Use`
+  - `manual browser`
+  - `real device/runtime`
+- build or commit fingerprint:
+
+## 5.1 Computer Use preconditions
+
+Fill only if Computer Use is requested.
+
+- exact app / browser / window:
+- account state:
+- allowed actions:
+- forbidden actions:
+- stop conditions:
+- sensitive actions requiring explicit approval:
 
 ## 6. Known risks or focus areas
 
@@ -52,3 +79,5 @@ Stop and return `Blocked` if:
 - the branch or build does not match the request;
 - acceptance criteria are ambiguous;
 - required credentials, devices, or data are missing.
+- Computer Use preconditions are missing for a signed-in or real GUI flow.
+- requested target is deployed/runtime proof but build identity cannot be proven.

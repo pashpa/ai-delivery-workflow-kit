@@ -15,6 +15,12 @@ QA may be performed by:
 - a browser/device automation agent;
 - a CI or test-runner operator.
 
+For UI work, QA should use:
+
+- `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md` for browser-level QA;
+- `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md` for signed-in or real GUI QA;
+- `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md` for runtime or device proof.
+
 ## 2. QA starts from a validation request
 
 QA should not start from vague chat instructions.
@@ -28,6 +34,9 @@ The request should include:
 - required commands or flows;
 - evidence format;
 - known risks or focus areas.
+
+Computer Use requests must also include exact app/window, account state, allowed
+actions, forbidden actions, and stop conditions.
 
 ## 3. QA does not own product or architecture decisions
 
@@ -65,6 +74,14 @@ Allowed QA outcomes:
 
 QA outcome is evidence for TL or release review. It is not automatically a merge or release decision.
 
-## 6. Process discipline
+## 6. Post-merge validation
+
+If QA target is merged, deployed, production, or runtime behavior, QA must prove
+that target explicitly.
+
+Use `workflow/templates/POST_MERGE_VALIDATION_TEMPLATE.md` when the validation
+request is post-merge or deploy-sensitive.
+
+## 7. Process discipline
 
 QA must not leave long-running validation processes, browsers, emulators, or servers alive unless the handoff explicitly assigns ownership.

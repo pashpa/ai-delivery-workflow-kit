@@ -98,3 +98,9 @@ Before handoff to Tech Lead, PM should be able to state clearly:
 - what exact output is expected from Tech Lead next.
 
 If PM cannot say that clearly, the package is not handoff-ready.
+
+PM handoff is a prepared work block, not a Developer Task.
+
+PM should not write implementation instructions that bypass Tech Lead shaping.
+Use `workflow/templates/PM_TO_TECH_LEAD_HANDOFF_TEMPLATE.md` and let Tech Lead
+turn the prepared product block into Lane or Task execution.

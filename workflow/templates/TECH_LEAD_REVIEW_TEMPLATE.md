@@ -13,6 +13,9 @@ Owner: Tech Lead
 - related docs:
 - CI:
 - screenshots or runtime proof:
+- QA surface used:
+- post-merge validation, if required:
+- security audit, if required:
 
 ## 1.1 Iteration plan status
 
@@ -37,6 +40,9 @@ Choose exactly one:
 - `Reject and retry`
 - `Stop and replan`
 
+Use `Stop and replan` when the current path has failed or assumptions are no
+longer valid. Do not continue blind fix loops.
+
 ## 4. Reasoning
 
 - why this verdict is correct
@@ -50,6 +56,8 @@ Choose exactly one:
 - can this be treated as `review-package-ready`:
 - can this count toward track closure right now:
 - if not, what exact package or merge trace is still missing:
+- if deploy/runtime proof is required, what exact proof exists:
+- if branch-only proof exists, is that enough for this Task:
 
 ## 7. Next step
 

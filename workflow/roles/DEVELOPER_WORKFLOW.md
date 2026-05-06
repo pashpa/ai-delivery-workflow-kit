@@ -22,6 +22,9 @@ The handoff should also include:
 - stop factors;
 - validation target.
 
+For delegated execution, Developer should also follow the handoff packet from
+`workflow/templates/TL_TO_DEVELOPER_SUBAGENT_PACKET_TEMPLATE.md`.
+
 ## 2. Start Ack is required
 
 Before coding starts, the Developer should return a short `Start Ack`.
@@ -86,6 +89,15 @@ Minimum checkpoint package:
 - CI status if applicable;
 - runtime evidence if applicable;
 - open blockers and next-step recommendation.
+
+For UI work, include browser-QA evidence using
+`workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`.
+
+For signed-in or real GUI validation, include or request a Computer Use QA
+packet using `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`.
+
+For installed app, WebView, native shell, provider, payment, or device-specific
+behavior, follow `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`.
 
 Investigation Tasks must also state:
 

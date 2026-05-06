@@ -25,10 +25,15 @@ It is designed for people building products with Codex App or similar coding age
 - Tech Lead role for lane planning, task packets, review, QA routing, and merge readiness;
 - Developer role for bounded implementation tasks;
 - QA role for validation evidence;
+- optional Security Auditor role for security findings and risk framing;
 - Initiative -> Track -> Lane -> Task hierarchy;
 - product-first delivery sequence;
 - Foundation Track before broad parallel delivery;
 - documentation ownership rules;
+- Definition of Ready / Done gates;
+- subagent delegation policy;
+- browser QA, Computer Use QA, runtime/device validation, and post-merge validation boundaries;
+- stop-and-replan runbook;
 - git freshness, branch lifecycle, merge discipline, and cleanup rules;
 - GPT-5.5 as the default execution baseline.
 

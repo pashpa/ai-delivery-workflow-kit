@@ -8,6 +8,11 @@ Purpose:
 - reduce workflow drift after long threads or context compression;
 - prevent lossy handoffs and silent model drift.
 
+Read with:
+
+- `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+- `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
+
 ## When it is mandatory
 
 Use this checklist:
@@ -28,6 +33,7 @@ If the checklist is not completed, treat the launch as invalid.
 - Canonical task doc:
 - Current Task status:
 - Packaging mode:
+- Definition of Ready passed: `yes / no`
 
 ## 2. Execution target
 
@@ -38,6 +44,7 @@ If the checklist is not completed, treat the launch as invalid.
 - Validation target:
   - `branch-only`
   - `preview`
+  - `merged main`
   - `deployed main`
   - `production runtime or device`
 
@@ -64,7 +71,8 @@ Confirm before launch:
 - checkpoint package is explicit;
 - freshness or sync gate is preserved if needed;
 - stop factors are preserved;
-- evidence requirements are preserved.
+- evidence requirements are preserved;
+- Computer Use or runtime/device requirements are preserved if relevant.
 
 ## 5. Start Ack contract
 
@@ -77,6 +85,15 @@ Require the delegated execution to return at least:
 - reasoning effort;
 - validation target;
 - blockers on start.
+
+## 5.1 Safety / QA boundary
+
+- Browser QA needed:
+- Computer Use QA needed:
+- Runtime/device proof needed:
+- Post-merge validation needed:
+- Security audit needed:
+- Sensitive or destructive actions explicitly forbidden:
 
 ## 6. Launch decision
 

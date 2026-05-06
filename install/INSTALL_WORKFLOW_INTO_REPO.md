@@ -49,6 +49,13 @@ Install:
 - `workflow/core/DOCUMENTATION_OWNERSHIP.md`
 - `workflow/core/GIT_OPERATIONS.md`
 - `workflow/core/GIT_COOKBOOK.md`
+- `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
+- `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+- `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`
+- `workflow/policies/DOCUMENT_HYGIENE_POLICY.md`
+- `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`
+- `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`
+- `workflow/guides/STOP_AND_REPLAN_RUNBOOK.md`
 - `workflow/roles/CTO_WORKFLOW.md`
 - `workflow/roles/PM_WORKFLOW.md`
 - `workflow/roles/PM_ONBOARDING.md`
@@ -57,6 +64,8 @@ Install:
 - `workflow/roles/DEVELOPER_WORKFLOW.md`
 - `workflow/roles/DEVELOPER_ONBOARDING.md`
 - `workflow/roles/QA_WORKFLOW.md`
+- `workflow/roles/SECURITY_AUDITOR_WORKFLOW.md` when the repo has security-sensitive surfaces
+- `workflow/prompts/PROMPT_BROWSER_QA_AGENT.md` when the repo has UI work
 - `workflow/templates/DEV_TASK_TEMPLATE.md`
 - `workflow/templates/TRACK_PLAN_TEMPLATE.md`
 - `workflow/templates/LANE_PLAN_TEMPLATE.md`
@@ -75,6 +84,8 @@ Install:
 - `workflow/templates/SUBAGENT_HANDOFF_TEMPLATE.md`
 - `workflow/templates/TL_SUBAGENT_LAUNCH_CHECKLIST.md`
 - `workflow/templates/TL_TO_DEVELOPER_SUBAGENT_PACKET_TEMPLATE.md`
+- `workflow/templates/POST_MERGE_VALIDATION_TEMPLATE.md`
+- `workflow/templates/SECURITY_AUDIT_MEMO_TEMPLATE.md` when the security auditor role is installed
 - root `AGENTS.md`
 - root `CURRENT_WORK.md`
 
@@ -100,7 +111,8 @@ The target repo root `AGENTS.md` should:
 - define root execution-surface rules;
 - define the freshness gate;
 - define git hygiene and packaging truth;
-- define any repo-specific QA or runtime rules.
+- define any repo-specific QA or runtime rules;
+- define how Codex in-app browser, Playwright, Chrome DevTools MCP, Computer Use, and real device/runtime validation should be used for this repo.
 
 ## 6. Define the repo baseline explicitly
 
@@ -114,6 +126,7 @@ When installation finishes, the target repo should make these things explicit:
 - GPT-5.5 default model and reasoning baseline;
 - whether PM is always required or only used when product truth is unclear;
 - browser QA expectations if UI work exists.
+- whether Computer Use QA or real device/runtime validation is needed for signed-in, provider, payment, native, mobile, or installed-app flows.
 
 ## 7. Do not over-install
 
@@ -123,6 +136,7 @@ Examples:
 
 - do not keep wording about worktrees if the target repo cannot or will not use them;
 - do not keep browser QA expectations in a backend-only service unless they are truly needed;
+- do not keep Computer Use or device-validation rules unless the repo has GUI/runtime flows that need them;
 - do not rename role labels without preserving the separate agent responsibilities.
 
 ## 8. Final installation output

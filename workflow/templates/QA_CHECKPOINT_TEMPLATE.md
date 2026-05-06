@@ -12,6 +12,15 @@ Owner: QA
 - Task or package:
 - Branch / PR / commit:
 - Environment:
+- Build / runtime fingerprint:
+- QA surface:
+  - `N/A`
+  - `Codex in-app browser`
+  - `Chrome DevTools MCP`
+  - `Playwright`
+  - `Computer Use`
+  - `manual browser`
+  - `real device/runtime`
 
 ## 2. Outcome
 
@@ -38,6 +47,9 @@ Choose one:
 - recordings:
 - logs:
 - browser/device matrix:
+- account state, if relevant:
+- sensitive actions not performed:
+- post-merge/deployed target proven: `yes / no / N/A`
 
 ## 6. Findings
 

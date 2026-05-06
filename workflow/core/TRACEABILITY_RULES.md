@@ -19,6 +19,7 @@ Every active Task should make the next reviewable artifact obvious:
 - checkpoint;
 - PR;
 - review memo;
+- post-merge validation report, if required;
 - blocker verdict;
 - next Task, Lane, or Track.
 
@@ -55,6 +56,7 @@ That means it should include:
 - current branch or package;
 - checks run;
 - acceptance status;
+- QA surface and runtime target when applicable;
 - open blockers or risks.
 
 ## 7. Reviews must be linked
@@ -66,7 +68,21 @@ A review must link to:
 - checks or evidence considered;
 - the formal outcome.
 
-## 8. Old truth must not compete with current truth
+## 8. Target truth must be traceable
+
+When work depends on merge, deploy, production, or runtime behavior, evidence
+must identify the target actually tested.
+
+Do not collapse:
+
+- branch;
+- preview;
+- merged main;
+- deployed main;
+- production runtime;
+- real device/runtime.
+
+## 9. Old truth must not compete with current truth
 
 If a plan, note, or path is obsolete, mark it.
 

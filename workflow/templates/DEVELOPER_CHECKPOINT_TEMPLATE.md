@@ -26,6 +26,11 @@ Owner: Developer
 ## 3. Branch / PR / commit
 
 - delivery status:
+  - `local-accepted`
+  - `review-package-ready`
+  - `merged`
+  - `deployed`
+  - `runtime-proven`
 - PR:
 - branch:
 - commit:
@@ -67,10 +72,21 @@ Owner: Developer
 
 ### UI / runtime checks
 
+- browser QA surface:
+  - `N/A`
+  - `Codex in-app browser`
+  - `Chrome DevTools MCP`
+  - `Playwright`
+  - `Computer Use`
+  - `manual browser`
+  - `browser-QA blocker`
 - checked states:
 - checked widths or devices:
 - screenshots:
+- console/network findings:
 - browser QA:
+- Computer Use QA:
+- post-merge validation:
 - real device check:
 
 ## 8. Evidence blockers / external dependencies
@@ -103,3 +119,4 @@ Fill only for investigation Tasks.
 
 - can this count as `review-package-ready`:
 - if not, what exact package step is still missing:
+- if deployed or runtime proof is required, is it already proven:

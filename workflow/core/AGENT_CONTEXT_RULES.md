@@ -33,6 +33,7 @@ The workflow uses documentation and role separation to keep work recoverable.
 - Developer: bounded implementation Task.
 - QA: validation evidence for a defined package.
 - Reviewer: factual verdict against acceptance and evidence.
+- Security Auditor: security findings and risk framing for sensitive surfaces.
 
 ## 4. Human ownership vs agent contexts
 
@@ -52,6 +53,9 @@ Direct execution is allowed only for:
 - emergency unblock with explicit follow-up.
 
 Non-trivial implementation should use TL-owned task packets and separate Developer or QA agents.
+
+Use `workflow/policies/SUBAGENT_DELEGATION_POLICY.md` for normal delegated
+execution rules.
 
 ## 6. Handoff rule
 
