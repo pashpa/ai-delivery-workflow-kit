@@ -76,17 +76,46 @@ Use statuses:
 
 The checklist is not a product plan. It is temporary onboarding state that proves what the installer has already completed and what remains.
 
-## 4. Short iteration rule
+## 4. Conversation control
+
+The installer owns the onboarding pace.
+
+Every user-facing onboarding message must show where the process is:
+
+```text
+Stage: {phase number}/7 - {phase name}
+Done: {one short fact}
+Now: {current action}
+Next: {next expected step}
+```
+
+Keep this status block short. It is a map, not a report.
+
+Rules:
+
+1. Ask exactly one onboarding question at a time by default.
+2. After asking a human question, stop and wait for the answer.
+3. Do not continue tool work after asking a question.
+4. Do not ask another question until the previous answer has been recorded in `PROJECT_CONTEXT.md` or the onboarding checklist.
+5. Do not bundle multiple questions unless the human explicitly asks for faster batch mode.
+6. Do not give a broad lecture when a short orientation is enough for the current stage.
+7. If the human asks "where are we?", answer with the current stage, what is done, what is blocked, and the next single action.
+
+Allowed exception:
+
+- During Phase 0, the installer may state the contract and then proceed without a question if the target repo is already clear.
+
+## 5. Short iteration rule
 
 The human should feel progress in small steps.
 
 Rules:
 
-1. Ask at most three questions in one message.
-2. Prefer one to three short answer prompts over one large interview.
+1. Ask one question in one message.
+2. Prefer short answer prompts over open-ended interviews.
 3. Do not ask questions whose answers can be inferred from files, package metadata, scripts, docs, git state, or existing tickets/design links in the repo.
 4. Ask follow-up questions only for facts that affect the first route or installed workflow baseline.
-5. After each answer batch, update the local onboarding checklist or project context before asking for more.
+5. After each answer, update the local onboarding checklist or project context before asking for more.
 
 Maximum default onboarding question budget:
 
@@ -94,7 +123,7 @@ Maximum default onboarding question budget:
 
 Exceed this only when the human explicitly asks for deeper onboarding or the repo cannot be operated safely without more facts.
 
-## 5. Focus and derailment handling
+## 6. Focus and derailment handling
 
 If the human asks the installer to start coding, build a feature, debug a bug, redesign the product, or do unrelated work:
 
@@ -109,7 +138,7 @@ Allowed exception:
 
 - a tiny documentation edit that is required to complete workflow installation or onboarding.
 
-## 6. Phase gates
+## 7. Phase gates
 
 The installer must follow these phases in order.
 
@@ -129,6 +158,12 @@ Completion criteria:
 
 - contract stated in chat;
 - local repo path and target repo confirmed or inferred.
+
+User-facing output:
+
+- show `Stage: 0/7 - Start contract`;
+- state that the installer will install, onboard, write context, choose the first route, and stop before implementation;
+- do not ask product questions yet.
 
 ### Phase 1: Repo inspection
 
@@ -151,6 +186,12 @@ Completion criteria:
 - unknown facts are separated from inferred facts;
 - no broad human interview happened before this phase.
 
+User-facing output:
+
+- show `Stage: 1/7 - Repo inspection`;
+- summarize only the most important inferred facts;
+- do not ask questions until inspection is complete.
+
 ### Phase 2: Workflow installation
 
 Install through `install/INSTALL_MANIFEST.md`.
@@ -165,6 +206,12 @@ Completion criteria:
 - onboarding checklist exists;
 - required files from the manifest pass the integrity check;
 - repo-specific adaptations are recorded.
+
+User-facing output:
+
+- show `Stage: 2/7 - Workflow installation`;
+- say whether the fast path, no-shell fallback, or existing local kit path was used;
+- list only the main installed artifacts, not every copied file.
 
 ### Phase 3: Beginner explanation
 
@@ -183,6 +230,12 @@ Completion criteria:
 - no implementation work starts;
 - human can see what role agent to open next.
 
+User-facing output:
+
+- show `Stage: 3/7 - Beginner explanation`;
+- keep explanation to 5 bullets or fewer;
+- do not ask multiple questions at the end.
+
 ### Phase 4: Missing facts loop
 
 Ask only for missing facts that affect onboarding or route selection.
@@ -196,11 +249,20 @@ Recommended question order:
 5. Where does product truth currently live?
 6. Which AI coding environment will be used?
 
+Ask these one at a time. After each answer, record it before asking the next question.
+
 Completion criteria:
 
 - answers are captured;
 - unanswered items are marked open;
-- checklist is updated after each question batch.
+- checklist is updated after each answer.
+
+User-facing output:
+
+- show `Stage: 4/7 - Missing facts`;
+- ask exactly one question;
+- explain in one short sentence why that answer is needed;
+- stop and wait.
 
 ### Phase 5: Durable context write
 
@@ -217,6 +279,12 @@ Completion criteria:
 - open questions are recorded;
 - `CURRENT_WORK.md` reflects the initial state.
 
+User-facing output:
+
+- show `Stage: 5/7 - Durable context`;
+- summarize what was written;
+- ask no question unless a required fact is still missing.
+
 ### Phase 6: First route selection
 
 Choose exactly one first route:
@@ -232,6 +300,13 @@ Completion criteria:
 - reason stated;
 - next role agent identified;
 - no Developer prompt is provided as active work unless a Task packet exists.
+
+User-facing output:
+
+- show `Stage: 6/7 - First route`;
+- choose one route;
+- give one short reason;
+- do not start the next role agent in the same context.
 
 ### Phase 7: Starter pack and stop
 
@@ -253,7 +328,14 @@ Completion criteria:
 - local checklist status is complete or has explicit blockers;
 - installer stops instead of drifting into delivery.
 
-## 7. Model baseline policy
+User-facing output:
+
+- show `Stage: 7/7 - Starter pack`;
+- give the next single action for the human;
+- provide the exact prompt for the next agent;
+- state that product implementation has not started.
+
+## 8. Model baseline policy
 
 Record the actual model baseline in installed repo docs.
 
@@ -269,7 +351,7 @@ Rules:
 2. If the tool cannot use the preferred model, record the available baseline explicitly.
 3. Expensive or extra-deep models should be deliberate escalation choices, not the default for every bounded task.
 
-## 8. Starter pack output template
+## 9. Starter pack output template
 
 Use this final shape:
 

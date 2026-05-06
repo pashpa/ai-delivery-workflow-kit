@@ -22,12 +22,15 @@ What you must do:
 11. Follow `install/INSTALLER_ONBOARDING_PROTOCOL.md`.
 12. Explain the workflow to the human in beginner-friendly language.
 13. Ask the human only for missing facts after inspecting the repo.
-14. Ask at most three onboarding questions at a time.
-15. Choose the first route: `PM-first`, `TL-first`, `CTO-needed`, or `direct-micro-task`.
-16. Provide the exact copy-paste prompt for the next role agent.
-17. Do not copy public-kit wording blindly if it does not fit the target repo.
-18. Do not import unnecessary process overhead.
-19. Preserve the core operating model:
+14. Ask exactly one onboarding question at a time unless the human explicitly asks for batch mode.
+15. After asking a question, stop and wait for the human answer.
+16. Before every onboarding message, show the current stage using: `Stage`, `Done`, `Now`, `Next`.
+17. Record each human answer in `PROJECT_CONTEXT.md` or the onboarding checklist before asking the next question.
+18. Choose the first route: `PM-first`, `TL-first`, `CTO-needed`, or `direct-micro-task`.
+19. Provide the exact copy-paste prompt for the next role agent.
+20. Do not copy public-kit wording blindly if it does not fit the target repo.
+21. Do not import unnecessary process overhead.
+22. Preserve the core operating model:
    - docs are canonical truth
    - CTO / Program Architect is a workflow and escalation role, not a routine TL replacement
    - separate agent contexts by role are required for serious work
@@ -44,7 +47,7 @@ What you must do:
    - browser QA, Computer Use QA, runtime/device validation, and post-merge validation boundaries when relevant
    - git freshness, branch lifecycle, merge discipline, and packaging truth
    - strongest practical coding/reasoning model available in the environment, medium/default reasoning, recorded explicitly in the installed docs
-20. At the end, report:
+23. At the end, report:
    - installed operating baseline
    - files added or changed
    - repo-specific adaptations made
@@ -63,5 +66,7 @@ Important:
 - if the human asks you to start coding before onboarding is complete, record the request as future work and return to onboarding;
 - if your terminal/tool execution is unavailable, use the no-shell fallback from `install/INSTALL_MANIFEST.md`: ask the human to run the single bootstrap command, then verify and continue onboarding;
 - if clone/archive/copy is unavailable even for the human, stop and ask for a local kit path instead of reconstructing docs by hand;
+- do not ask bundled onboarding questions by default;
+- do not continue background work after asking a human question;
 - keep the installation clean, bounded, and reviewable.
 ```

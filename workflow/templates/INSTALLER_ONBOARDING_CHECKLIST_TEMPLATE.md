@@ -9,6 +9,8 @@ This checklist tracks workflow installation and human onboarding progress.
 
 It should be updated locally by the installer agent after each onboarding phase.
 
+User-facing onboarding must proceed one question at a time unless the human explicitly asks for batch mode.
+
 ## 1. Phase status
 
 Allowed statuses:
@@ -56,7 +58,7 @@ Allowed statuses:
 
 ## 4. Human answers captured
 
-Ask at most three questions per message. Do not ask what the repo already answers.
+Ask exactly one onboarding question per message. After asking, stop and wait. Do not ask what the repo already answers.
 
 | Question | Answer | Recorded in project context |
 | --- | --- | --- |

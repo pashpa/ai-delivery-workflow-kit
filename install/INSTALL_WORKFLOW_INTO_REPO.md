@@ -198,7 +198,8 @@ The installer must:
 - create and update `workflow/onboarding/INSTALLER_ONBOARDING_CHECKLIST.md`;
 - explain the workflow in beginner-friendly language;
 - explain that role names are separate agent contexts, not fake team bureaucracy;
-- ask at most three human questions at a time;
+- ask exactly one onboarding question at a time unless the human explicitly asks for batch mode;
+- after asking a question, stop and wait for the human answer;
 - ask only for missing facts after repo inspection;
 - write durable context into `PROJECT_CONTEXT.md` or the repo's equivalent;
 - update `CURRENT_WORK.md`;
