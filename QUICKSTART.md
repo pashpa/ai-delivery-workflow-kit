@@ -26,7 +26,9 @@ Important:
 - do not recreate canonical workflow docs manually with patches or editor writes;
 - create root `AGENTS.md`, `CURRENT_WORK.md`, `PROJECT_CONTEXT.md`, and `workflow/onboarding/INSTALLER_ONBOARDING_CHECKLIST.md` from templates;
 - inspect the repo before asking me broad questions;
-- ask me only short batches of missing questions, at most three questions at a time;
+- ask exactly one onboarding question at a time unless I explicitly ask for batch mode;
+- after asking me a question, stop and wait for my answer;
+- before every onboarding message, show the current stage using: Stage, Done, Now, Next;
 - use the strongest practical coding/reasoning model available in this environment with medium/default reasoning, and record the actual baseline in the installed docs;
 - install the workflow docs, root AGENTS.md, current work index, role docs, templates, and git rules that fit this repo;
 - install the Definition of Ready / Done, subagent delegation, QA, runtime validation, post-merge validation, and document hygiene safeguards that fit this repo;
