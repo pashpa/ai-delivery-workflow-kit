@@ -43,7 +43,15 @@ Rules:
 4. Do not raw-fetch and rewrite workflow docs one file at a time.
 5. Do not summarize or translate canonical workflow docs during installation.
 
-If the fast copy path is blocked, stop and ask the human for help. Do not hand-recreate the workflow.
+If the fast copy path is blocked because the agent terminal is unavailable, use the no-shell fallback from `install/INSTALL_MANIFEST.md`:
+
+- provide the single bootstrap command;
+- ask the human to run it from the target repo directory;
+- wait for "bootstrap complete";
+- verify the installed files;
+- continue onboarding.
+
+Do not hand-recreate the workflow.
 
 ## 3. Local progress tracking
 
@@ -150,6 +158,7 @@ Install through `install/INSTALL_MANIFEST.md`.
 Completion criteria:
 
 - full `workflow/` tree copied;
+- no-shell fallback used only if agent terminal execution was unavailable;
 - root `AGENTS.md` created or updated from `workflow/templates/ROOT_AGENTS_TEMPLATE.md`;
 - `CURRENT_WORK.md` created or updated from `workflow/templates/CURRENT_WORK_TEMPLATE.md`;
 - `PROJECT_CONTEXT.md` created or updated from `workflow/templates/PROJECT_CONTEXT_TEMPLATE.md`;

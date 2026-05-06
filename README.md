@@ -23,6 +23,8 @@ Installer agents must start with [`install/INSTALL_MANIFEST.md`](install/INSTALL
 - create target root files from templates;
 - do not raw-fetch and rewrite files one by one.
 
+If an agent cannot execute terminal commands in its environment, it should use the no-shell fallback in the manifest: ask the human to run one bootstrap command, then verify and continue onboarding. It should not fall back to rebuilding the workflow one file at a time.
+
 Use it when you want an agent to install a structured workflow into a software repository and then work inside that repository with:
 
 - clear CTO / Program Architect -> PM -> Tech Lead -> Developer handoffs;
