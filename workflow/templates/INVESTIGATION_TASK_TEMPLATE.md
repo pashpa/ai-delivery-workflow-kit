@@ -4,10 +4,10 @@ Date: YYYY-MM-DD
 Status: draft
 Owner: Tech Lead
 Executor: Developer
-Initiative: `<name>`
-Track: `<name>`
-Lane: `<name>`
-Task: `<name>`
+Initiative: `{name}`
+Track: `{name}`
+Lane: `{name}`
+Task: `{name}`
 Task mode: `investigation`
 
 ## 1. Basis

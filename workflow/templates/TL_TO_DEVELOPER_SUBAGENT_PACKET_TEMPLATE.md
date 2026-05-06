@@ -14,7 +14,7 @@ Use this for normal delegated developer launches.
 ## 2. Execution mode
 
 - Role: `developer`
-- Model: `GPT-5.5`
+- Model:
 - Reasoning: `medium`
 - Validation target:
 

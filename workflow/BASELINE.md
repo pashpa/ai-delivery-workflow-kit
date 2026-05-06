@@ -35,7 +35,7 @@ It is designed for people building products with Codex App or similar coding age
 - browser QA, Computer Use QA, runtime/device validation, and post-merge validation boundaries;
 - stop-and-replan runbook;
 - git freshness, branch lifecycle, merge discipline, and cleanup rules;
-- GPT-5.5 as the default execution baseline.
+- an explicit model baseline using the strongest practical coding/reasoning model available in the user's environment.
 
 ## 3. Non-negotiable model
 
@@ -81,9 +81,10 @@ Architecture may come first only when product intent is already clear or the wor
 
 Default execution baseline:
 
-- model: `GPT-5.5`
-- reasoning: `medium`
+- OpenAI / Codex: strongest available GPT coding/reasoning model, medium reasoning.
+- Claude: Sonnet for normal delivery; Opus only for difficult architecture, escalation, or deep review.
+- Cursor or other tools: strongest practical coding model available, medium/default reasoning.
 
-If a repo wants a different model, the CTO / workflow owner agent should update this baseline explicitly in the installed repo docs.
+The installer or CTO / workflow owner agent should record the actual available baseline explicitly in the installed repo docs.
 
 Individual agents should not silently change the model per task.

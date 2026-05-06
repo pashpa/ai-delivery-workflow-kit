@@ -42,10 +42,11 @@ For UI, runtime, or deploy-sensitive work also read:
 
 For normal delivery execution:
 
-- model: `GPT-5.5`
-- reasoning: `medium`
+- OpenAI / Codex: strongest available GPT coding/reasoning model, medium reasoning.
+- Claude: Sonnet for normal delivery; Opus only for difficult architecture, escalation, or deep review.
+- Cursor or other tools: strongest practical coding model available, medium/default reasoning.
 
-If a repo wants a different baseline, it should state that explicitly.
+The installed repo should state the actual available baseline explicitly.
 
 ## 4. Operating rules
 

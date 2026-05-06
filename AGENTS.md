@@ -29,6 +29,21 @@ Canonical workflow truth lives in:
 
 If chat guidance conflicts with these docs, follow the repo docs unless the user explicitly overrides them.
 
+## Installer Agent Rule
+
+If your task is to install this kit into another repository, read these first:
+
+- `install/INSTALL_MANIFEST.md`
+- `install/INSTALL_WORKFLOW_INTO_REPO.md`
+- `install/INSTALLER_ONBOARDING_PROTOCOL.md` when onboarding is requested
+- `install/AGENT_ADOPTION_PROMPT.md`
+
+Install through clone/archive + full `workflow/` tree copy.
+
+Do not raw-fetch GitHub files one at a time.
+Do not recreate canonical workflow docs with patches or editor writes.
+Do not copy this source repo root `AGENTS.md`, `README.md`, or `QUICKSTART.md` as target product-repo files. Create target root files from templates.
+
 ## Root worktree rule
 
 Treat the repository root as a control plane by default.
@@ -128,7 +143,7 @@ Use separate agent contexts for separate responsibilities.
 
 Do not collapse CTO / Program Architect, PM, Tech Lead, Developer, QA, review, and release work into one long-running agent context.
 
-Default execution baseline is GPT-5.5 with medium reasoning. If the baseline changes, update the repo-level workflow docs explicitly.
+Default execution baseline is the strongest practical coding/reasoning model available in the environment with medium/default reasoning. If the baseline changes, update the repo-level workflow docs explicitly.
 
 Before launching delegated implementation, use:
 

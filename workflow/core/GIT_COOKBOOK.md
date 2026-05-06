@@ -30,16 +30,16 @@ Do not start from stale local `main`.
 ```bash
 git switch main
 git pull --ff-only origin main
-git switch -c feature/<short-scope>
+git switch -c feature/{short-scope}
 ```
 
 Use a prefix that matches the work:
 
-- `feature/<short-scope>`
-- `fix/<short-scope>`
-- `docs/<short-scope>`
-- `workflow/<short-scope>`
-- `audit/<short-scope>`
+- `feature/{short-scope}`
+- `fix/{short-scope}`
+- `docs/{short-scope}`
+- `workflow/{short-scope}`
+- `audit/{short-scope}`
 
 ## 3. Optional worktree for parallel work
 
@@ -47,7 +47,7 @@ From the control-plane repo:
 
 ```bash
 git fetch origin --prune
-git worktree add ../<repo>-worktrees/<short-scope> -b feature/<short-scope> origin/main
+git worktree add ../{repo}-worktrees/{short-scope} -b feature/{short-scope} origin/main
 ```
 
 Use worktrees when multiple agents or lanes may run in parallel.
@@ -69,8 +69,8 @@ Do not overwrite unknown or user-owned changes.
 ```bash
 git status --short
 git diff --stat
-git add <files>
-git commit -m "<clear package summary>"
+git add {files}
+git commit -m "{clear package summary}"
 ```
 
 Commit only related changes for the current Task, Lane, or workflow package.
@@ -84,7 +84,7 @@ git push -u origin HEAD
 If GitHub CLI is available:
 
 ```bash
-gh pr create --title "<title>" --body "<summary, validation, risks>"
+gh pr create --title "{title}" --body "{summary, validation, risks}"
 ```
 
 ## 7. Update a branch before review
@@ -93,7 +93,7 @@ If the base moved:
 
 ```bash
 git fetch origin --prune
-git switch <branch>
+git switch {branch}
 git rebase origin/main
 ```
 
@@ -110,8 +110,8 @@ Finish or abort any rebase or merge in the same work cycle.
 Use the repo's PR policy. With GitHub CLI:
 
 ```bash
-gh pr view <number> --json mergeStateStatus,isDraft,reviewDecision,statusCheckRollup
-gh pr merge <number> --merge --delete-branch
+gh pr view {number} --json mergeStateStatus,isDraft,reviewDecision,statusCheckRollup
+gh pr merge {number} --merge --delete-branch
 ```
 
 After merge:
@@ -127,15 +127,15 @@ git status --short --branch
 After the branch is merged and no longer needed:
 
 ```bash
-git branch --delete <branch>
+git branch --delete {branch}
 ```
 
 If a worktree was used:
 
 ```bash
 git worktree list
-git worktree remove ../<repo>-worktrees/<short-scope>
-git branch --delete <branch>
+git worktree remove ../{repo}-worktrees/{short-scope}
+git branch --delete {branch}
 ```
 
 Never delete a branch that still contains unmerged work unless abandonment is explicit.

@@ -38,7 +38,7 @@ If the checklist is not completed, treat the launch as invalid.
 ## 2. Execution target
 
 - Delegated role:
-- Model: `GPT-5.5`
+- Model:
 - Reasoning effort:
   - default for developer execution: `medium`
 - Validation target:
@@ -81,7 +81,7 @@ Require the delegated execution to return at least:
 - Initiative, Track, Lane, and Task;
 - execution surface;
 - current base commit;
-- `model = GPT-5.5`
+- model;
 - reasoning effort;
 - validation target;
 - blockers on start.
