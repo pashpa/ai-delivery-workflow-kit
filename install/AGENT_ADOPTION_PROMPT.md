@@ -61,6 +61,7 @@ Important:
 - treat the target repo root as control plane unless there is a better explicit repo-specific rule;
 - do not start product implementation;
 - if the human asks you to start coding before onboarding is complete, record the request as future work and return to onboarding;
-- if clone/archive/copy is unavailable, stop and ask for help instead of reconstructing docs by hand;
+- if your terminal/tool execution is unavailable, use the no-shell fallback from `install/INSTALL_MANIFEST.md`: ask the human to run the single bootstrap command, then verify and continue onboarding;
+- if clone/archive/copy is unavailable even for the human, stop and ask for a local kit path instead of reconstructing docs by hand;
 - keep the installation clean, bounded, and reviewable.
 ```

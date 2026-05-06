@@ -40,6 +40,26 @@ Do not:
 
 If the environment cannot clone, download, or copy the source tree, stop and ask the human for permission or a local path to the kit. Do not fall back to slow hand reconstruction.
 
+## 2.1 No-shell fallback
+
+If the agent's terminal/tool execution is broken, for example even `echo` does not run, the agent must not switch to the prohibited slow path.
+
+Instead:
+
+1. Explain that the environment cannot execute the copy-first install.
+2. Ask the human to run one bootstrap command from the target repo directory.
+3. After the human reports completion, verify the integrity check and continue onboarding.
+
+Recommended macOS/Linux bootstrap command:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/pashpa/ai-delivery-workflow-kit/main/install/bootstrap.sh)"
+```
+
+If the target repo already has a `workflow/` directory, the bootstrap script refuses to overwrite it. In that case, stop and inspect the existing workflow before proceeding.
+
+Do not offer "I will install slowly by WebFetching every file" as an option. That path is intentionally forbidden because it is slow, partial, and prone to corrupting markdown placeholders.
+
 ## 3. Source tree to copy
 
 Copy the full `workflow/` directory.

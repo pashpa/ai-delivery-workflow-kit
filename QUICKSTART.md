@@ -33,6 +33,8 @@ Important:
 - adapt paths and commands to this repo instead of copying blindly;
 - do not start product implementation yet.
 
+If your terminal/tool execution is unavailable, do not switch to slow WebFetch reconstruction. Ask me to run the single bootstrap command from `install/INSTALL_MANIFEST.md`, then verify the install and continue onboarding.
+
 After installation and onboarding, report:
 - files added or changed;
 - repo-specific workflow decisions;
