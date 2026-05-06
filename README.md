@@ -25,6 +25,8 @@ Use it when you want an agent to install a structured workflow into a software r
 - explicit documentation truth;
 - reviewable checkpoints;
 - controlled delegation to subagents;
+- explicit Definition of Ready / Done gates;
+- modern browser, Computer Use, runtime, and post-merge QA boundaries;
 - branch/worktree/process discipline;
 - git freshness and merge lifecycle discipline.
 
@@ -58,7 +60,9 @@ That baseline assumes:
 - start acknowledgements;
 - checkpoints and factual review;
 - launch checklists for PM and TL;
-- branch/worktree/process discipline.
+- branch/worktree/process discipline;
+- advanced safeguards for subagent delegation, QA, runtime validation, post-merge
+  proof, document hygiene, and stop-and-replan decisions.
 
 Default model baseline:
 
@@ -80,6 +84,13 @@ If you want a different model, ask the CTO / workflow owner agent to update the 
 - [`workflow/core/DOCUMENTATION_OWNERSHIP.md`](workflow/core/DOCUMENTATION_OWNERSHIP.md)
 - [`workflow/core/GIT_OPERATIONS.md`](workflow/core/GIT_OPERATIONS.md)
 - [`workflow/core/GIT_COOKBOOK.md`](workflow/core/GIT_COOKBOOK.md)
+- [`workflow/policies/DEFINITION_OF_READY_AND_DONE.md`](workflow/policies/DEFINITION_OF_READY_AND_DONE.md)
+- [`workflow/policies/SUBAGENT_DELEGATION_POLICY.md`](workflow/policies/SUBAGENT_DELEGATION_POLICY.md)
+- [`workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`](workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md)
+- [`workflow/policies/DOCUMENT_HYGIENE_POLICY.md`](workflow/policies/DOCUMENT_HYGIENE_POLICY.md)
+- [`workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`](workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md)
+- [`workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`](workflow/guides/COMPUTER_USE_QA_WORKFLOW.md)
+- [`workflow/guides/STOP_AND_REPLAN_RUNBOOK.md`](workflow/guides/STOP_AND_REPLAN_RUNBOOK.md)
 - [`workflow/roles/CTO_WORKFLOW.md`](workflow/roles/CTO_WORKFLOW.md)
 - [`workflow/roles/PM_WORKFLOW.md`](workflow/roles/PM_WORKFLOW.md)
 - [`workflow/roles/PM_ONBOARDING.md`](workflow/roles/PM_ONBOARDING.md)
@@ -88,6 +99,8 @@ If you want a different model, ask the CTO / workflow owner agent to update the 
 - [`workflow/roles/DEVELOPER_WORKFLOW.md`](workflow/roles/DEVELOPER_WORKFLOW.md)
 - [`workflow/roles/DEVELOPER_ONBOARDING.md`](workflow/roles/DEVELOPER_ONBOARDING.md)
 - [`workflow/roles/QA_WORKFLOW.md`](workflow/roles/QA_WORKFLOW.md)
+- [`workflow/roles/SECURITY_AUDITOR_WORKFLOW.md`](workflow/roles/SECURITY_AUDITOR_WORKFLOW.md)
+- [`workflow/prompts/PROMPT_BROWSER_QA_AGENT.md`](workflow/prompts/PROMPT_BROWSER_QA_AGENT.md)
 - [`workflow/templates/`](workflow/templates)
 - [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md)
 - [`install/AGENT_ADOPTION_PROMPT.md`](install/AGENT_ADOPTION_PROMPT.md)

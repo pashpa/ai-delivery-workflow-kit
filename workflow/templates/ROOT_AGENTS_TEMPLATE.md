@@ -13,11 +13,19 @@ Canonical workflow truth lives in:
 - `workflow/core/DOCUMENTATION_OWNERSHIP.md`
 - `workflow/core/GIT_OPERATIONS.md`
 - `workflow/core/GIT_COOKBOOK.md`
+- `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
+- `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+- `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`
+- `workflow/policies/DOCUMENT_HYGIENE_POLICY.md`
+- `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`
+- `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`
+- `workflow/guides/STOP_AND_REPLAN_RUNBOOK.md`
 - `workflow/roles/CTO_WORKFLOW.md`
 - `workflow/roles/PM_WORKFLOW.md`
 - `workflow/roles/TECH_LEAD_WORKFLOW.md`
 - `workflow/roles/DEVELOPER_WORKFLOW.md`
 - `workflow/roles/QA_WORKFLOW.md`
+- `workflow/roles/SECURITY_AUDITOR_WORKFLOW.md`
 - `CURRENT_WORK.md`
 
 If chat guidance conflicts with these docs, follow the repo docs unless the user explicitly overrides them.
@@ -38,6 +46,21 @@ Default execution baseline:
 - reasoning: `medium`
 
 If this needs to change, ask the CTO / workflow owner agent to update the repo-level model baseline. Individual agents must not silently change model choices per task.
+
+## Delegation Baseline
+
+For non-trivial implementation:
+
+1. Tech Lead supervises.
+2. Developer executes.
+3. Tech Lead launches Developer work with:
+   - `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
+   - `workflow/templates/TL_SUBAGENT_LAUNCH_CHECKLIST.md`
+   - `workflow/templates/TL_TO_DEVELOPER_SUBAGENT_PACKET_TEMPLATE.md`
+4. Developer subagent default is `GPT-5.5` with `medium` reasoning.
+
+Direct TL coding is an exception for micro-fixes, workflow-only edits, doc-only
+changes, or documented emergency unblock.
 
 ## Work Hierarchy
 
@@ -102,3 +125,11 @@ A checkpoint is not a merge. A merged PR is not automatically a closed Track.
 Use the narrowest check that proves the change.
 
 Broaden validation when work crosses a surface, public contract, security boundary, deployment behavior, or user-visible runtime behavior.
+
+For UI work:
+
+- use `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md` for browser-level QA;
+- use Codex in-app browser / Browser Use for local/public unauthenticated visual QA when available;
+- use Playwright or Chrome DevTools MCP for deterministic checks or fallback automation;
+- use `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md` for scoped signed-in or real GUI QA;
+- use `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md` when real device, installed app, WebView, provider, payment, or runtime proof is required.

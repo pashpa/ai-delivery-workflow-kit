@@ -25,6 +25,7 @@ PM must know how to distinguish:
 4. `workflow/roles/PM_WORKFLOW.md`
 5. `workflow/templates/PM_LAUNCH_CHECKLIST.md`
 6. `workflow/templates/PM_TO_TECH_LEAD_HANDOFF_TEMPLATE.md`
+7. `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
 
 ## 3. Operating rules
 
@@ -33,6 +34,7 @@ PM must know how to distinguish:
 3. For non-trivial PM work, use a dedicated branch and clean execution surface.
 4. Use the PM launch checklist before non-trivial PM work.
 5. For cross-surface features, define one shared product contract before splitting the work.
+6. Handoff to Tech Lead is a prepared work block, not a Developer task packet.
 
 ## 4. Handoff rule
 

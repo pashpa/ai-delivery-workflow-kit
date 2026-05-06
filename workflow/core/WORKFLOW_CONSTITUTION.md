@@ -18,6 +18,9 @@ Before delivery starts, there must be:
 - acceptance criteria;
 - for non-trivial delegated execution, a canonical task document.
 
+Use `workflow/policies/DEFINITION_OF_READY_AND_DONE.md` as the default gate for
+whether work can start or close.
+
 ## 2. Chat is not source of truth
 
 Chat is for:
@@ -63,6 +66,9 @@ This also applies to bug and regression work.
 
 If a normal fix loop does not work, the team must open an explicit investigation Task instead of continuing blind patching.
 
+Use `workflow/guides/STOP_AND_REPLAN_RUNBOOK.md` when the current delivery path
+is no longer rational.
+
 ## 4. Canonical work hierarchy
 
 New work uses:
@@ -97,6 +103,7 @@ Every artifact must have an owner.
 - Developer owns task execution and checkpoint evidence.
 - QA owns validation evidence when assigned.
 - Reviewer owns the factual review verdict.
+- Security Auditor owns security findings and risk framing when assigned.
 
 ## 7. Review is factual
 
@@ -195,6 +202,9 @@ For non-trivial implementation work, the normal operating split is:
 
 - Tech Lead owns path, orchestration, task handoff, branch/package readiness, and review;
 - Developer owns code-writing execution.
+
+Use `workflow/policies/SUBAGENT_DELEGATION_POLICY.md` for delegated execution
+rules.
 
 ## 15. Git freshness is required
 

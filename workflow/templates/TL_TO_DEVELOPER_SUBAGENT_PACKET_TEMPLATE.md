@@ -58,6 +58,8 @@ Supporting docs:
 - If a stop factor is hit, return a blocker instead of improvising a new path.
 - `Start Ack` first.
 - Reviewable checkpoint second.
+- Follow `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`.
+- Follow `workflow/policies/DEFINITION_OF_READY_AND_DONE.md` for start and closure gates.
 
 ## 9. Required back
 
@@ -65,6 +67,7 @@ Supporting docs:
 - touched files
 - what was done / not done / blocked
 - checks run
+- browser, runtime, Computer Use, or post-merge evidence if required
 - blockers / risks
 
 ## Rule

@@ -2,6 +2,9 @@
 
 Use this when Tech Lead delegates bounded work directly to a subagent.
 
+For Developer subagents, also apply
+`workflow/policies/SUBAGENT_DELEGATION_POLICY.md`.
+
 ## 1. Canonical Task
 
 - Initiative:
@@ -34,6 +37,14 @@ Use this when Tech Lead delegates bounded work directly to a subagent.
 
 - Required checks:
 - Required evidence:
+- Required QA surface:
+  - `N/A`
+  - `Codex in-app browser`
+  - `Chrome DevTools MCP`
+  - `Playwright`
+  - `Computer Use`
+  - `real device/runtime`
+  - `post-merge validation`
 - Checkpoint format:
   - `workflow/templates/DEVELOPER_CHECKPOINT_TEMPLATE.md`
 

@@ -25,6 +25,9 @@ This is not optional process overhead. It is how the workflow protects context q
 
 One human may coordinate the whole product, but each agent should still receive role-specific context and bounded work.
 
+Delegated execution should follow
+`workflow/policies/SUBAGENT_DELEGATION_POLICY.md`.
+
 ## 2. Canonical work hierarchy
 
 New work uses this hierarchy:
@@ -109,6 +112,9 @@ Tech Leads own:
 - checkpoint review;
 - branch/package readiness.
 
+Tech Leads should use `workflow/policies/DEFINITION_OF_READY_AND_DONE.md` before
+launching or closing non-trivial work.
+
 CTO / Program Architect owns:
 
 - workflow rules;
@@ -133,3 +139,6 @@ Every active initiative should make these clear:
 - next reviewable artifact.
 
 If this cannot be stated from docs, the workflow is not healthy yet.
+
+Use `workflow/policies/DEFINITION_OF_READY_AND_DONE.md` to decide whether the
+next handoff is ready and whether the current package can be called done.

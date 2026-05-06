@@ -25,14 +25,15 @@ Decisions, scope, Tracks, Lanes, and Tasks must be reflected in:
 4. Delivery Planning Track splits the work into TL-owned Tracks or Lanes.
 5. Foundation Track creates shared rails before parallel delivery when multiple TLs will build on common contracts.
 6. Tech Lead creates Lane docs and canonical Task documents.
-7. Tech Lead chooses execution mode.
+7. Tech Lead checks Definition of Ready and chooses execution mode.
 8. Developer starts through an explicit `Start Ack`.
 9. Developer executes the Task within scope.
 10. Developer returns a checkpoint.
 11. Tech Lead reviews factually.
-12. The Task or Lane gets one of the allowed outcomes.
-13. Documentation is updated.
-14. The team moves to the next Task, Lane, or Track.
+12. Tech Lead checks Definition of Done.
+13. The Task or Lane gets one of the allowed outcomes.
+14. Documentation is updated.
+15. The team moves to the next Task, Lane, or Track.
 
 Product work does not always require PM.
 
@@ -78,6 +79,8 @@ CTO / Program Architect does not replace PM or TL ownership.
 
 ### PM -> Tech Lead
 
+PM provides a prepared work block, not a Developer Task.
+
 PM provides:
 
 - product docs;
@@ -86,6 +89,8 @@ PM provides:
 - non-goals;
 - dependencies;
 - product-level definition of done.
+
+PM should use `workflow/templates/PM_TO_TECH_LEAD_HANDOFF_TEMPLATE.md`.
 
 ### Tech Lead -> Developer
 
@@ -158,6 +163,9 @@ The delegated path requires:
 - checkpoint;
 - factual review.
 
+Use `workflow/policies/SUBAGENT_DELEGATION_POLICY.md` for detailed delegated
+execution rules.
+
 ## 7. Model and reasoning baseline
 
 For normal delivery work, the default execution baseline is:
@@ -180,7 +188,16 @@ Use short operating checklists:
 
 These checklists exist to reduce drift after long threads, context compression, or team handoffs.
 
-## 9. Documentation and git
+## 9. QA and runtime proof
+
+Use the narrowest validation surface that proves the acceptance target.
+
+- Browser-level UI proof follows `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`.
+- Signed-in or real GUI proof follows `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`.
+- Runtime or device proof follows `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`.
+- Post-merge or deployed proof uses `workflow/templates/POST_MERGE_VALIDATION_TEMPLATE.md`.
+
+## 10. Documentation and git
 
 Every role must leave durable outputs as defined in `workflow/core/DOCUMENTATION_OWNERSHIP.md`.
 

@@ -34,18 +34,24 @@ It should be short enough that a new agent can read it before starting work.
 
 ## 5. Active Tasks
 
-| Task | Lane | Executor | Status | Branch / PR | Next checkpoint |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
+| Task | Lane | Executor | Status | Branch / PR | Validation target | Next checkpoint |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |
 
-## 6. Current decisions
+## 6. Validation / closure watchlist
+
+| Package | Owner | Required proof | Status | Next action |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+## 7. Current decisions
 
 - ...
 
-## 7. Open escalations
+## 8. Open escalations
 
 - ...
 
-## 8. Recently closed
+## 9. Recently closed
 
 - ...

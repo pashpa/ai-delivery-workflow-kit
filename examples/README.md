@@ -16,10 +16,10 @@ The expected user behavior is:
 
 ## Example scenarios to model in a target repo
 
+- [Small UI task](small-ui-task.md)
+- [Cross-surface feature](cross-surface-feature.md)
+- [Post-merge validation](post-merge-validation.md)
 - new product from zero;
-- existing repo with a new feature;
-- existing repo with a bug investigation;
-- cross-surface feature contract;
-- small Task vs full Lane package.
+- existing repo with a bug investigation.
 
 Even in small examples, keep separate role contexts for PM, TL, Developer, and QA work when the work is non-trivial.

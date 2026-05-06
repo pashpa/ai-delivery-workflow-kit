@@ -21,6 +21,7 @@ Important:
 - do not collapse CTO / Program Architect, PM, Tech Lead, Developer, and QA into one long-running agent context;
 - use GPT-5.5 as the default execution baseline;
 - install the workflow docs, root AGENTS.md, current work index, role docs, templates, and git rules that fit this repo;
+- install the Definition of Ready / Done, subagent delegation, QA, runtime validation, post-merge validation, and document hygiene safeguards that fit this repo;
 - adapt paths and commands to this repo instead of copying blindly;
 - do not start product implementation yet.
 
@@ -40,8 +41,10 @@ The kit installs a repo-first AI delivery workflow:
 - separate agent roles to protect context quality;
 - product-first delivery;
 - Tech Lead controlled delegation;
+- explicit Ready / Done gates;
 - reviewable checkpoints;
 - QA evidence;
+- modern browser QA, Computer Use QA, runtime/device proof, and post-merge validation boundaries;
 - git freshness, branch, merge, and cleanup rules.
 
 ## 3. Why separate agents matter

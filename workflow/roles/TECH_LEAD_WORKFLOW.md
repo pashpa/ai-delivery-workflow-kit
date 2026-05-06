@@ -65,6 +65,9 @@ Before a non-trivial Task starts, Tech Lead should define:
 - packaging mode;
 - current Track, Lane, and Task artifact.
 
+Tech Lead should check `workflow/policies/DEFINITION_OF_READY_AND_DONE.md`
+before launching non-trivial execution.
+
 If the Task is bug or regression work, Tech Lead must decide whether it is:
 
 - a normal fix Task;
@@ -75,6 +78,7 @@ If the Task is bug or regression work, Tech Lead must decide whether it is:
 Before delegated execution, Tech Lead must:
 
 - use the TL launch checklist;
+- use `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`;
 - point to the canonical task doc;
 - pass a lossless handoff packet;
 - require `Start Ack`.
@@ -104,6 +108,15 @@ Review should consider:
 - checks and CI;
 - screenshots or runtime evidence when applicable;
 - open blockers or residual risk.
+
+For UI or runtime-sensitive work, review evidence against:
+
+- `workflow/guides/FRONTEND_QA_WITH_CODEX_BROWSER.md`
+- `workflow/guides/COMPUTER_USE_QA_WORKFLOW.md`
+- `workflow/policies/RUNTIME_DEVICE_VALIDATION_POLICY.md`
+
+For merged or deployed proof, use
+`workflow/templates/POST_MERGE_VALIDATION_TEMPLATE.md`.
 
 ## 8. Do not confuse these states
 
@@ -137,3 +150,6 @@ For the assigned Lane or Task, Tech Lead owns:
 - post-merge status updates.
 
 Use `workflow/core/GIT_OPERATIONS.md` unless the target repo provides a stricter adapted rule.
+
+Security-sensitive work may require a Security Auditor pass using
+`workflow/roles/SECURITY_AUDITOR_WORKFLOW.md`.
