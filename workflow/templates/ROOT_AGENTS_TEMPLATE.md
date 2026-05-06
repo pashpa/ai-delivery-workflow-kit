@@ -42,10 +42,11 @@ The human may own the whole product, but agent contexts should stay role-specifi
 
 Default execution baseline:
 
-- model: `GPT-5.5`
-- reasoning: `medium`
+- OpenAI / Codex: strongest available GPT coding/reasoning model, medium reasoning.
+- Claude: Sonnet for normal delivery; Opus only for difficult architecture, escalation, or deep review.
+- Cursor or other tools: strongest practical coding model available, medium/default reasoning.
 
-If this needs to change, ask the CTO / workflow owner agent to update the repo-level model baseline. Individual agents must not silently change model choices per task.
+Record the actual available baseline for this repo during installation. Individual agents must not silently change model choices per task.
 
 ## Delegation Baseline
 
@@ -57,7 +58,7 @@ For non-trivial implementation:
    - `workflow/policies/SUBAGENT_DELEGATION_POLICY.md`
    - `workflow/templates/TL_SUBAGENT_LAUNCH_CHECKLIST.md`
    - `workflow/templates/TL_TO_DEVELOPER_SUBAGENT_PACKET_TEMPLATE.md`
-4. Developer subagent default is `GPT-5.5` with `medium` reasoning.
+4. Developer subagent default is the installed repo baseline with medium/default reasoning.
 
 Direct TL coding is an exception for micro-fixes, workflow-only edits, doc-only
 changes, or documented emergency unblock.

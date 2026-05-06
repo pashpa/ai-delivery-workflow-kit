@@ -76,6 +76,8 @@ Prompts are optional launch helpers for delegated agents.
 - QA validation request and checkpoint templates
 - post-merge validation template
 - security audit memo template
+- installer onboarding checklist template
+- project context template
 
 These files are the operating layer. They are meant to be copied and used, not just read once.
 

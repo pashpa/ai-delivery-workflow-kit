@@ -10,8 +10,8 @@ It should be short enough that a new agent can read it before starting work.
 
 ## 1. Model baseline
 
-- Default model: `GPT-5.5`
-- Default reasoning: `medium`
+- Default model:
+- Default reasoning:
 - Model changes owner: CTO / Program Architect or workflow owner
 
 ## 2. Active Initiatives

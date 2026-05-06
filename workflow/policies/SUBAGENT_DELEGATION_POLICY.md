@@ -125,11 +125,11 @@ Do not pass an entire long chat unless the subtask truly depends on that chat.
 
 Default execution baseline:
 
-- model: `GPT-5.5`
-- reasoning: `medium`
+- OpenAI / Codex: strongest available GPT coding/reasoning model, medium reasoning.
+- Claude: Sonnet for normal delivery; Opus only for difficult architecture, escalation, or deep review.
+- Cursor or other tools: strongest practical coding model available, medium/default reasoning.
 
-Normal delivery subagents should use the baseline unless the repo explicitly
-changes it in workflow docs.
+Normal delivery subagents should use the installed repo baseline unless the repo explicitly changes it in workflow docs.
 
 Smaller or mini models are not the normal delivery path. If a team wants to use
 them for inventory or simple checks, that exception should be explicit.

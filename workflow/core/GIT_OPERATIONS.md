@@ -34,11 +34,11 @@ For non-trivial work:
 
 Recommended branch prefixes:
 
-- `feature/<short-scope>`
-- `fix/<short-scope>`
-- `workflow/<short-scope>`
-- `docs/<short-scope>`
-- `audit/<short-scope>`
+- `feature/{short-scope}`
+- `fix/{short-scope}`
+- `workflow/{short-scope}`
+- `docs/{short-scope}`
+- `audit/{short-scope}`
 
 ## 3. Mainline truth
 

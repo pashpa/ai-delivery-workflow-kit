@@ -170,10 +170,11 @@ execution rules.
 
 For normal delivery work, the default execution baseline is:
 
-- model: `GPT-5.5`
-- reasoning: `medium`
+- OpenAI / Codex: strongest available GPT coding/reasoning model, medium reasoning.
+- Claude: Sonnet for normal delivery; Opus only for difficult architecture, escalation, or deep review.
+- Cursor or other tools: strongest practical coding model available, medium/default reasoning.
 
-If a team changes this baseline, the CTO / workflow owner agent should update it explicitly at repo level.
+The installer or CTO / workflow owner agent should record the actual available baseline explicitly at repo level.
 
 Individual agents should not silently change model choices per task.
 

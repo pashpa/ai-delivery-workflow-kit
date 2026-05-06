@@ -33,8 +33,7 @@ Owner: Developer
 - Reasoning:
 - Matches repo baseline: `yes / no`
 
-Default baseline is `GPT-5.5` with `medium` reasoning unless the installed repo
-workflow says otherwise.
+Default baseline is the installed repo model baseline with medium/default reasoning unless the installed repo workflow says otherwise.
 
 ## 5. Blockers on start
 
