@@ -8,22 +8,13 @@ This repository is not a dump of one team's private process. It is a clean, publ
 
 Most users should not read every file first.
 
-If you are building a product with Codex App or a similar coding agent, open [`QUICKSTART.md`](QUICKSTART.md), copy the install and onboarding prompt, and give your agent:
+If you are building a product with Codex App or a similar coding agent, open [`QUICKSTART.md`](QUICKSTART.md), copy the install prompt, and give your agent:
 
 - this repo URL;
 - your product repo;
-- the instruction to install the workflow, onboard you into using it, and stop before product implementation.
+- the instruction to install the workflow and stop before product implementation.
 
-The agent should install the docs through the copy-first manifest, create root `AGENTS.md`, current work index, project context, onboarding checklist, role rules, templates, and git rules into your repo.
-
-Installer agents must start with [`install/INSTALL_MANIFEST.md`](install/INSTALL_MANIFEST.md):
-
-- fetch this kit once by clone or archive;
-- copy the full `workflow/` tree;
-- create target root files from templates;
-- do not raw-fetch and rewrite files one by one.
-
-If an agent cannot execute terminal commands in its environment, it should use the no-shell fallback in the manifest: ask the human to run one bootstrap command, then verify and continue onboarding. It should not fall back to rebuilding the workflow one file at a time.
+The agent should install the docs, root `AGENTS.md`, current work index, role rules, templates, and git rules into your repo.
 
 Use it when you want an agent to install a structured workflow into a software repository and then work inside that repository with:
 
@@ -38,7 +29,6 @@ Use it when you want an agent to install a structured workflow into a software r
 - modern browser, Computer Use, runtime, and post-merge QA boundaries;
 - branch/worktree/process discipline;
 - git freshness and merge lifecycle discipline.
-- installer-led onboarding for solo or beginner AI-assisted delivery.
 
 ## What this repo is for
 
@@ -113,10 +103,8 @@ The installer should record the actual available baseline in the target repo. In
 - [`workflow/roles/SECURITY_AUDITOR_WORKFLOW.md`](workflow/roles/SECURITY_AUDITOR_WORKFLOW.md)
 - [`workflow/prompts/PROMPT_BROWSER_QA_AGENT.md`](workflow/prompts/PROMPT_BROWSER_QA_AGENT.md)
 - [`workflow/templates/`](workflow/templates)
-- [`install/INSTALL_MANIFEST.md`](install/INSTALL_MANIFEST.md)
 - [`install/INSTALL_WORKFLOW_INTO_REPO.md`](install/INSTALL_WORKFLOW_INTO_REPO.md)
 - [`install/AGENT_ADOPTION_PROMPT.md`](install/AGENT_ADOPTION_PROMPT.md)
-- [`install/INSTALLER_ONBOARDING_PROTOCOL.md`](install/INSTALLER_ONBOARDING_PROTOCOL.md)
 
 ## Minimal adoption path
 
@@ -124,12 +112,10 @@ If you want to install this into another repo:
 
 1. Read [`QUICKSTART.md`](QUICKSTART.md).
 2. Use [`workflow/BASELINE.md`](workflow/BASELINE.md) as the installation baseline.
-3. Follow [`install/INSTALL_MANIFEST.md`](install/INSTALL_MANIFEST.md): fetch the kit once and copy the full `workflow/` tree.
-4. Create the target repo root `AGENTS.md` from [`workflow/templates/ROOT_AGENTS_TEMPLATE.md`](workflow/templates/ROOT_AGENTS_TEMPLATE.md).
+3. Copy and adapt the workflow docs into the target repo.
+4. Rewrite the target repo root `AGENTS.md` so that it points to the installed workflow docs.
 5. Add a `CURRENT_WORK.md` index from [`workflow/templates/CURRENT_WORK_TEMPLATE.md`](workflow/templates/CURRENT_WORK_TEMPLATE.md).
-6. Add a project context document from [`workflow/templates/PROJECT_CONTEXT_TEMPLATE.md`](workflow/templates/PROJECT_CONTEXT_TEMPLATE.md).
-7. If onboarding a human repo owner, create a local checklist from [`workflow/templates/INSTALLER_ONBOARDING_CHECKLIST_TEMPLATE.md`](workflow/templates/INSTALLER_ONBOARDING_CHECKLIST_TEMPLATE.md).
-8. Start using the role docs and templates immediately.
+6. Start using the role docs and templates immediately.
 
 If you want an agent to do the installation for you:
 

@@ -1,6 +1,6 @@
 # Quickstart
 
-Use this if you want Codex App or another coding agent to install the workflow into your product repo and onboard you into using it.
+Use this if you want Codex App or another coding agent to install the workflow into your product repo.
 
 ## 1. The short version
 
@@ -12,38 +12,23 @@ Give your agent two things:
 Then paste this:
 
 ```text
-Install the workflow from https://github.com/pashpa/ai-delivery-workflow-kit into this target repository and onboard me into using it.
+Install the workflow from https://github.com/pashpa/ai-delivery-workflow-kit into this target repository.
 
 I want the installed workflow to become the operating system for product delivery in this repo.
 
 Important:
 - preserve the multi-agent role model;
 - do not collapse CTO / Program Architect, PM, Tech Lead, Developer, and QA into one long-running agent context;
-- follow `install/INSTALL_MANIFEST.md` for installation;
-- follow `install/INSTALLER_ONBOARDING_PROTOCOL.md` for onboarding;
-- fetch the kit once by `git clone` or GitHub archive, then copy the full `workflow/` tree;
-- do not raw-fetch GitHub files one at a time;
-- do not recreate canonical workflow docs manually with patches or editor writes;
-- create root `AGENTS.md`, `CURRENT_WORK.md`, `PROJECT_CONTEXT.md`, and `workflow/onboarding/INSTALLER_ONBOARDING_CHECKLIST.md` from templates;
-- inspect the repo before asking me broad questions;
-- ask exactly one onboarding question at a time unless I explicitly ask for batch mode;
-- after asking me a question, stop and wait for my answer;
-- before every onboarding message, show the current stage using: Stage, Done, Now, Next;
 - use the strongest practical coding/reasoning model available in this environment with medium/default reasoning, and record the actual baseline in the installed docs;
 - install the workflow docs, root AGENTS.md, current work index, role docs, templates, and git rules that fit this repo;
 - install the Definition of Ready / Done, subagent delegation, QA, runtime validation, post-merge validation, and document hygiene safeguards that fit this repo;
 - adapt paths and commands to this repo instead of copying blindly;
 - do not start product implementation yet.
 
-If your terminal/tool execution is unavailable, do not switch to slow WebFetch reconstruction. Ask me to run the single bootstrap command from `install/INSTALL_MANIFEST.md`, then verify the install and continue onboarding.
-
-After installation and onboarding, report:
+After installation, report:
 - files added or changed;
 - repo-specific workflow decisions;
-- what you inferred from the repo;
-- what you still need from me, if anything;
-- the recommended first route: PM-first, TL-first, CTO-needed, or direct micro-task;
-- the exact copy-paste prompt for the next agent session;
+- how I should start the first Initiative;
 - any open decisions I need to answer.
 ```
 
@@ -60,8 +45,7 @@ The kit installs a repo-first AI delivery workflow:
 - reviewable checkpoints;
 - QA evidence;
 - modern browser QA, Computer Use QA, runtime/device proof, and post-merge validation boundaries;
-- git freshness, branch, merge, and cleanup rules;
-- installer-led human onboarding with a local progress checklist.
+- git freshness, branch, merge, and cleanup rules.
 
 ## 3. Why separate agents matter
 
@@ -98,17 +82,9 @@ The installer should record the actual baseline in the installed workflow docs.
 
 Do not let individual agents silently downgrade or improvise model choices per task.
 
-## 5. After onboarding
+## 5. After installation
 
-The installer should end with a starter pack and the exact next-agent prompt.
-
-Usually, the first working agent will be:
-
-- PM, if product truth is unclear;
-- TL, if product intent is clear and implementation needs planning;
-- CTO / Program Architect, if cross-track architecture or workflow escalation is needed.
-
-If you need to restart manually, ask the workflow owner agent:
+Start by asking the workflow owner agent:
 
 ```text
 Using the installed workflow, create the first Initiative and current work index for this product.
