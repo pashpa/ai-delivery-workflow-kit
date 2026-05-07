@@ -18,6 +18,8 @@ The agent should install the docs, root `AGENTS.md`, current work index, role ru
 
 This workflow has been exercised primarily with Codex App. If you use another agent system, tell the installing agent to replace root `AGENTS.md` with that system's equivalent mechanism for repo-level agent instructions.
 
+The git examples assume GitHub-style defaults. If your target repo uses GitLab or a different default branch/merge request flow, tell the installing agent to adapt the git commands, branch names, and PR/MR terminology to that system.
+
 Use it when you want an agent to install a structured workflow into a software repository and then work inside that repository with:
 
 - clear CTO / Program Architect -> PM -> Tech Lead -> Developer handoffs;
